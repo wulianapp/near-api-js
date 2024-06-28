@@ -1,15 +1,15 @@
-import { PublicKey } from "@near-js/crypto";
-import { Assignable } from "@near-js/types";
+import { PublicKey } from '@near-js/crypto';
+import { Assignable } from '@near-js/types';
 
-import { DelegateAction } from "./delegate";
-import { Signature } from "./signature";
+import { DelegateAction } from './delegate';
+import { Signature } from './signature';
 
 abstract class Enum {
     enum: string;
 
     constructor(properties: any) {
         if (Object.keys(properties).length !== 1) {
-            throw new Error("Enum can only take single value");
+            throw new Error('Enum can only take single value');
         }
         Object.keys(properties).map((key: string) => {
             (this as any)[key] = properties[key];
