@@ -28,7 +28,7 @@ module.exports = {
 if (require.main === module) {
     (async function () {
         const networkId = 'testnet';
-        const provider = new JsonRpcProvider({ url: 'https://rpc.testnet.near.org' });
+        const provider = new JsonRpcProvider({ url: 'https://rpc.testnet.chainless.top' });
 
         const CREDENTIALS_DIR = '.near-credentials';
         const credentialsPath = path.join(os.homedir(), CREDENTIALS_DIR);

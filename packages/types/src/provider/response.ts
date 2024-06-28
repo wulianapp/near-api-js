@@ -2,12 +2,17 @@
  * NEAR RPC API request types and responses
  * @module
  */
-import { BlockHash, BlockHeight, MerklePath, TxExecutionStatus } from './protocol';
+import {
+    BlockHash,
+    BlockHeight,
+    MerklePath,
+    TxExecutionStatus,
+} from "./protocol";
 
 export enum ExecutionStatusBasic {
-    Unknown = 'Unknown',
-    Pending = 'Pending',
-    Failure = 'Failure',
+    Unknown = "Unknown",
+    Pending = "Pending",
+    Failure = "Failure",
 }
 
 export interface ExecutionStatus {
@@ -17,9 +22,9 @@ export interface ExecutionStatus {
 }
 
 export enum FinalExecutionStatusBasic {
-    NotStarted = 'NotStarted',
-    Started = 'Started',
-    Failure = 'Failure',
+    NotStarted = "NotStarted",
+    Started = "Started",
+    Failure = "Failure",
 }
 
 export interface ExecutionError {
@@ -74,6 +79,14 @@ export interface AccountView extends QueryResponseKind {
     storage_paid_at: BlockHeight;
 }
 
+export interface MtBalancesView extends QueryResponseKind {
+    tokens: { symbol: string; balance: string }[];
+}
+
+export interface TransferFeeView extends QueryResponseKind {
+    fees: null | (null | string)[];
+}
+
 interface StateItem {
     key: string;
     value: string;
@@ -105,11 +118,11 @@ export interface FunctionCallPermissionView {
 
 export interface AccessKeyViewRaw extends QueryResponseKind {
     nonce: number;
-    permission: 'FullAccess' | FunctionCallPermissionView;
+    permission: "FullAccess" | FunctionCallPermissionView;
 }
 export interface AccessKeyView extends QueryResponseKind {
     nonce: bigint;
-    permission: 'FullAccess' | FunctionCallPermissionView;
+    permission: "FullAccess" | FunctionCallPermissionView;
 }
 
 export interface AccessKeyInfoView {

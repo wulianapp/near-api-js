@@ -10,7 +10,7 @@ const keyStore = new keyStores.UnencryptedFileSystemKeyStore(credentialsPath);
 const config = {
   keyStore,
   networkId: "mainnet",
-  nodeUrl: "https://rpc.mainnet.near.org",
+  nodeUrl: "https://rpc.mainnet.chainless.top",
 };
 
 // Unwrap 1 wNEAR to NEAR

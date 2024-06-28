@@ -12,7 +12,7 @@ const keyStore = new keyStores.UnencryptedFileSystemKeyStore(credentialsPath);
 const config = {
     keyStore,
     networkId: "testnet",
-    nodeUrl: "https://rpc.testnet.near.org",
+    nodeUrl: "https://rpc.testnet.chainless.top",
 };
 
 deployContract(ACCOUNT_ID, WASM_PATH);

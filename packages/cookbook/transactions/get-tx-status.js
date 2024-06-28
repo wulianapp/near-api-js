@@ -3,12 +3,12 @@ const { providers } = require("near-api-js");
 
 //network config (replace testnet with mainnet or betanet)
 const provider = new providers.JsonRpcProvider(
-    "https://archival-rpc.testnet.near.org"
+    "https://rpc.testnet.chainless.top"
 );
 
-const TX_HASH = "9av2U6cova7LZPA9NPij6CTUrpBbgPG6LKVkyhcCqtk3";
+const TX_HASH = "9wWoD7REWEigSaYoUrmqxnu3qXvfyNeBFJTxEDznsRrL";
 // account ID associated with the transaction
-const ACCOUNT_ID = "sender.testnet";
+const ACCOUNT_ID = "multisig_send_mt.chainless";
 
 getState(TX_HASH, ACCOUNT_ID);
 

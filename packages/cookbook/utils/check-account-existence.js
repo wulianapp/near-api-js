@@ -2,7 +2,7 @@
 const { providers } = require("near-api-js");
 
 const provider = new providers.JsonRpcProvider(
-    "https://archival-rpc.testnet.near.org"
+    "https://archival-rpc.testnet.chainless.top"
 );
 
 async function accountExists() {

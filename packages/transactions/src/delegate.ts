@@ -84,8 +84,8 @@ export function buildDelegateAction({
                 }
                 case 'Transfer': {
                     // @ts-expect-error type workaround
-                    const { deposit } = a.params;
-                    return transfer(deposit);
+                    const { symbol, deposit, fee } = a.params;
+                    return transfer(symbol, deposit, fee);
                 }
             }
 

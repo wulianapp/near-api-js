@@ -19,6 +19,7 @@ NEAR JavaScript API is a complete library to interact with the NEAR blockchain. 
 
 1. Install dependencies
 
+       pnpm build
        pnpm install
 
 2. Run continuous build with:

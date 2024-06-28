@@ -76,7 +76,7 @@ export class AccountMultisig extends Account {
             result = await super.signAndSendTransaction({
                 receiverId: accountId,
                 actions: [
-                    functionCall('add_request_and_confirm', args, MULTISIG_GAS, MULTISIG_DEPOSIT)
+                    functionCall('add_request_and_confirm', args, MULTISIG_GAS, undefined, MULTISIG_DEPOSIT, undefined)
                 ]
             });
         } catch (e) {
@@ -128,7 +128,7 @@ export class AccountMultisig extends Account {
                 await super.signAndSendTransaction({
                     receiverId: this.accountId, actions: [
                         deployContract(contractBytes),
-                        functionCall('delete_request', { request_id: u32_max }, MULTISIG_GAS, MULTISIG_DEPOSIT)
+                        functionCall('delete_request', { request_id: u32_max }, MULTISIG_GAS, undefined, MULTISIG_DEPOSIT, undefined)
                     ]
                 });
             } else {
@@ -159,7 +159,7 @@ export class AccountMultisig extends Account {
     deleteRequest(request_id) {
         return super.signAndSendTransaction({
             receiverId: this.accountId,
-            actions: [functionCall('delete_request', { request_id }, MULTISIG_GAS, MULTISIG_DEPOSIT)]
+            actions: [functionCall('delete_request', { request_id }, MULTISIG_GAS, undefined, MULTISIG_DEPOSIT, undefined)]
         });
     }
 
@@ -190,7 +190,7 @@ export class AccountMultisig extends Account {
             try {
                 await super.signAndSendTransaction({
                     receiverId: this.accountId,
-                    actions: [functionCall('delete_request', { request_id: requestIdToDelete }, MULTISIG_GAS, MULTISIG_DEPOSIT)]
+                    actions: [functionCall('delete_request', { request_id: requestIdToDelete }, MULTISIG_GAS, undefined, MULTISIG_DEPOSIT, undefined)]
                 });
             } catch (e) {
                 Logger.warn('Attempt to delete an earlier request before 15 minutes failed. Will try again.');

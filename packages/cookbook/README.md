@@ -7,10 +7,15 @@ Collection of common use cases for [`near-api-js`](https://github.com/near/near-
 | **ACCOUNTS**                                                    |                                                                                                                  |
 | [Create Account](./accounts/create-testnet-account.js)          | Create [NEAR accounts](https://docs.near.org/concepts/basics/account) without using NEAR Wallet.                   |
 | [Access Key Rotation](./accounts/access-keys/README.md)         | Create and delete [access keys](https://docs.near.org/concepts/basics/account#access-keys) for added security.     |
+| [Get MT Balances](./accounts/get_mt_balances.js)                |                                                                                                                  |
+| [Estimate Transfer Fee](./accounts/get_mt_balances.js)          |                                                                                                                  |
 | **TRANSACTIONS**                                                |                                                                                                                  |
 | [Get Transaction Status](./transactions/get-tx-status.js)       | Gets transaction status using a tx hash and associated account/contract ID.                                      |
 | [Recent Transaction Details](./transactions/get-tx-detail.js)   | Get recent transaction details without using an [indexing](https://docs.near.org/docs/concepts/indexer) service. |
 | [Batch Transactions](./transactions/batch-transactions.js)      | Sign and send multiple [transactions](https://docs.near.org/docs/concepts/transaction).                          |
+| **META TRANSACTIONS**                                           |                                                                                                                  |
+| [Transfer](./meta-transaction-relayer/transfer.js)              | Send MT                                                                                                          |
+| [Call Function](./meta-transaction-relayer/function_call.js)    | Call contract function                                                                                           |
 | **UTILS**                                                       |                                                                                                                  |
 | [Deploy Contract](./utils/deploy-contract.js)                   | Deploys a contract using a pre-compiled .wasm file                                                               |
 | [Calculate Gas](./utils/calculate-gas.js)                       | Calculate [gas burnt](https://docs.near.org/docs/concepts/gas) from any contract call.                           |

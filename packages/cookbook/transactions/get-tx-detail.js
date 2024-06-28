@@ -19,7 +19,7 @@ const keyStore = new keyStores.UnencryptedFileSystemKeyStore(credentialsPath);
 const config = {
   keyStore,
   networkId: "testnet",
-  nodeUrl: "https://archival-rpc.testnet.near.org",
+  nodeUrl: "https://rpc.testnet.chainless.top",
 };
 
 getTransactions(START_BLOCK_HASH, END_BLOCK_HASH, CONTRACT_ID);
@@ -66,7 +66,7 @@ async function getTransactions(startBlock, endBlock, accountId) {
   //creates transaction links from matchingTxs
   const txsLinks = transactions.map((txs) => ({
     method: txs.actions[0].FunctionCall.method_name,
-    link: `https://explorer.testnet.near.org/transactions/${txs.hash}`,
+    link: `https://explorer.testnet.chainless.top/transactions/${txs.hash}`,
   }));
   console.log("MATCHING TRANSACTIONS: ", transactions);
   console.log("TRANSACTION LINKS: ", txsLinks);

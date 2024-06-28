@@ -1,4 +1,4 @@
-import { PublicKey } from '@near-js/crypto';
+import { PublicKey } from "@near-js/crypto";
 
 import {
     AccessKey,
@@ -9,15 +9,16 @@ import {
     DeleteAccount,
     DeleteKey,
     DeployContract,
+    Deposit,
     FullAccessPermission,
     FunctionCall,
     FunctionCallPermission,
     SignedDelegate,
     Stake,
     Transfer,
-} from './actions';
-import { DelegateAction } from './delegate';
-import { Signature } from './signature';
+} from "./actions";
+import { DelegateAction } from "./delegate";
+import { Signature } from "./signature";
 
 /**
  * Creates a full access key with full access permissions.
@@ -99,13 +100,25 @@ function functionCall(
     methodName: string,
     args: Uint8Array | object,
     gas = BigInt(0),
-    deposit = BigInt(0),
+    symbol?: string,
+    deposit?: BigInt,
+    fee?: string,
     stringify = stringifyJsonOrBytes,
     jsContract = false
 ): Action {
+    const depositObj =
+        deposit === undefined || deposit === BigInt(0)
+            ? undefined
+            : new Deposit({ symbol, deposit, fee });
+
     if (jsContract) {
         return new Action({
-            functionCall: new FunctionCall({ methodName, args, gas, deposit }),
+            functionCall: new FunctionCall({
+                methodName,
+                args,
+                gas,
+                deposit: depositObj,
+            }),
         });
     }
 
@@ -114,7 +127,7 @@ function functionCall(
             methodName,
             args: stringify(args),
             gas,
-            deposit,
+            deposit: depositObj,
         }),
     });
 }
@@ -124,8 +137,12 @@ function functionCall(
  * @param deposit The amount to be deposited along with the transfer. Default: 0.
  * @returns A new action for transferring funds.
  */
-function transfer(deposit = BigInt(0)): Action {
-    return new Action({ transfer: new Transfer({ deposit }) });
+function transfer(symbol?: string, deposit = BigInt(0), fee?: string): Action {
+    return new Action({
+        transfer: new Transfer({
+            deposit: new Deposit({ symbol, deposit, fee }),
+        }),
+    });
 }
 
 /**

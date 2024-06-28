@@ -44,6 +44,8 @@ export {
     ViewAccessKeyListRequest,
     ViewAccessKeyRequest,
     ViewAccountRequest,
+    ViewMtBalancesRequest,
+    ViewTransferFeeRequest,
     ViewCodeRequest,
     ViewStateRequest,
 } from './request';
@@ -53,6 +55,8 @@ export {
     AccessKeyView,
     AccessKeyViewRaw,
     AccountView,
+    MtBalancesView,
+    TransferFeeView,
     CodeResult,
     ContractCodeView,
     ExecutionError,

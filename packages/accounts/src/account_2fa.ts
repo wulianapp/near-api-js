@@ -93,7 +93,7 @@ export class Account2FA extends AccountMultisig {
             addKey(confirmOnlyKey, functionCallAccessKey(accountId, MULTISIG_CONFIRM_METHODS, null)),
             deployContract(contractBytes),
         ];
-        const newFunctionCallActionBatch = actions.concat(functionCall('new', newArgs, MULTISIG_GAS, MULTISIG_DEPOSIT));
+        const newFunctionCallActionBatch = actions.concat(functionCall('new', newArgs, MULTISIG_GAS, undefined, MULTISIG_DEPOSIT, undefined));
         Logger.log('deploying multisig contract for', accountId);
 
         const { stateStatus: multisigStateStatus } = await this.checkMultisigCodeAndStateStatus(contractBytes);
@@ -158,7 +158,7 @@ export class Account2FA extends AccountMultisig {
         const currentAccountStateKeys = currentAccountState.map(({ key }) => key.toString('base64'));
         return currentAccountState.length ? [
             deployContract(cleanupContractBytes),
-            functionCall('clean', { keys: currentAccountStateKeys }, MULTISIG_GAS, BigInt('0'))
+            functionCall('clean', { keys: currentAccountStateKeys }, MULTISIG_GAS, undefined, BigInt('0'), undefined)
         ] : [];
     }
 

@@ -135,12 +135,26 @@ export const SCHEMA = new class BorshSchema {
             methodName: 'string',
             args: { array: { type: 'u8' } },
             gas: 'u64',
-            deposit: 'u128',
+            deposit: {
+                option: {
+                    struct: {
+                        deposit: 'u128',
+                        symbol: { option: 'string' },
+                        fee: { option: 'string' },
+                    }
+                }
+            },
         }
     };
     Transfer: Schema = {
         struct: {
-            deposit: 'u128',
+            deposit: {
+                struct: {
+                    deposit: 'u128',
+                    symbol: { option: 'string' },
+                    fee: { option: 'string' },
+                }
+            }
         }
     };
     Stake: Schema = {
