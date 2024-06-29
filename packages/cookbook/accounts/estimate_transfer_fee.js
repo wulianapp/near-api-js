@@ -7,7 +7,7 @@ const CREDENTIALS_DIR = ".near-credentials";
 const credentialsPath = path.join(homedir, CREDENTIALS_DIR);
 const keyStore = new keyStores.UnencryptedFileSystemKeyStore(credentialsPath);
 
-const RPC_API_ENDPOINT = "https://rpc.testnet.chainless.top";
+const RPC_API_ENDPOINT = "https://rpc-testnet.chainless.top";
 const API_KEY = "";
 
 const ACCOUNT_ID = "chainless";

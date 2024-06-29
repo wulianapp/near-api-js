@@ -19,7 +19,7 @@ async function sendNearThroughRelayer({ amount, receiverId, senderAccount }) {
     });
 
     return fetchJson(
-        "https://relayer.testnet.chainless.top/send_meta_tx_borsh",
+        "https://relayer-testnet.chainless.top/send_meta_tx_borsh",
         Buffer.from(Array.from(encodeSignedDelegate(signedDelegate))).toString(
             "base64"
         )
@@ -34,7 +34,7 @@ if (require.main === module) {
     (async function () {
         const networkId = "testnet";
         const provider = new JsonRpcProvider({
-            url: "https://rpc.testnet.chainless.top",
+            url: "https://rpc-testnet.chainless.top",
         });
 
         const CREDENTIALS_DIR = ".near-credentials";

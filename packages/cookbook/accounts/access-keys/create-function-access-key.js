@@ -10,7 +10,7 @@ const keyStore = new keyStores.UnencryptedFileSystemKeyStore(credentialsPath);
 const config = {
   keyStore,
   networkId: "testnet",
-  nodeUrl: "https://rpc.testnet.chainless.top",
+  nodeUrl: "https://rpc-testnet.chainless.top",
 };
 
 addFunctionAccessKey(ACCOUNT_ID);

@@ -3,7 +3,7 @@ const { providers } = require("near-api-js");
 
 //network config (replace testnet with mainnet or betanet)
 const provider = new providers.JsonRpcProvider(
-    "https://rpc.testnet.chainless.top"
+    "https://rpc-testnet.chainless.top"
 );
 
 const TX_HASH = "9wWoD7REWEigSaYoUrmqxnu3qXvfyNeBFJTxEDznsRrL";

@@ -14,7 +14,7 @@ const keyStore = new keyStores.UnencryptedFileSystemKeyStore(credentialsPath);
 const config = {
   keyStore,
   networkId: "mainnet",
-  nodeUrl: "https://rpc.mainnet.chainless.top",
+  nodeUrl: "https://rpc-mainnet.chainless.top",
 };
 
 if (process.argv.length !== 5) {
