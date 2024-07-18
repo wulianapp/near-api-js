@@ -49,7 +49,7 @@ if (require.main === module) {
         const CREDENTIALS_DIR = ".near-credentials";
         const credentialsPath = path.join(os.homedir(), CREDENTIALS_DIR);
 
-        const RECEIVER_ACCOUNT_ID = "multisig_send_mt.chainless"; // the ultimate recipient of the meta transaction execution
+        const RECEIVER_ACCOUNT_ID = "multisig-send-mt.chainless"; // the ultimate recipient of the meta transaction execution
         const SENDER_ACCOUNT_ID = "chainless"; // the account requesting the transaction be executed
 
         const senderAccount = new Account(
