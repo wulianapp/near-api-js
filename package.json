@@ -5,6 +5,9 @@
     "node": ">=16.14.0",
     "pnpm": ">=7"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "build": "turbo run build",
@@ -32,8 +35,5 @@
     "typedoc": "0.25.3",
     "typescript": "4.9.4"
   },
-  "resolutions": {
-    "near-sandbox": "0.0.18",
-    "near-api-js": "4.0.0"
-  }
+  "resolutions": {}
 }
