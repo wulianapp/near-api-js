@@ -1,0 +1,31 @@
+name: Telegram Alert on New Pull Request
+run-name: notify telegram on new PR(${{ github.event.pull_request.head.ref }}->${{ github.event.pull_request.base.ref }})
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  generate-message:
+    runs-on: ubuntu-latest
+    outputs:
+      message: ${{ steps.prep_message.outputs.message }}
+    steps:
+      - name: Prepare Message
+        id: prep_message
+        run: |
+          PR_TITLE="${{ github.event.pull_request.title }}"
+          PR_URL="${{ github.event.pull_request.html_url }}"
+          PR_USER="${{ github.event.pull_request.user.login }}"
+          PR_ASSIGNEE="${{ github.event.pull_request.assignee.login }}"
+          MESSAGE="New PR detected:%0ATitle:$PR_TITLE%0AURL:$PR_URL%0AAuthor:$PR_USER%0AAssignee:$PR_ASSIGNEE"
+          echo "message=$MESSAGE" >> $GITHUB_OUTPUT
+
+  alert-by-telegram:
+    needs: generate-message
+    uses: wulianapp/devops/.github/workflows/send-telegram-message.yml@main
+    with:
+      message: ${{ needs.generate-message.outputs.message }}
+      telegram_chat_id: ${{ vars.TELEGRAM_CHAT_ID }}
+    secrets:
+      telegram_token: ${{ secrets.TELEGRAM_BOT_API_TOKEN }}

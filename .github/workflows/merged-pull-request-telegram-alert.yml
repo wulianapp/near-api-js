@@ -1,0 +1,34 @@
+name: Telegram Alert on Merged Pull Request
+run-name: notify telegram on PR(${{ github.event.pull_request.head.ref }}->${{ github.event.pull_request.base.ref }}) merged
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  generate-message:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    outputs:
+      message: ${{ steps.prep_message.outputs.message }}
+    steps:
+      - name: Prepare Message
+        id: prep_message
+        run: |
+          PR_TITLE="${{ github.event.pull_request.title }}"
+          PR_URL="${{ github.event.pull_request.html_url }}"
+          PR_USER="${{ github.event.pull_request.user.login }}"
+          PR_ASSIGNEE="${{ github.event.pull_request.assignee.login }}"
+          MESSAGE="PR merged:%0ATitle:$PR_TITLE%0AURL:$PR_URL%0AAuthor:$PR_USER%0AAssignee:$PR_ASSIGNEE"
+          echo "message=$MESSAGE" >> $GITHUB_OUTPUT
+
+  alert-by-telegram:
+    if: github.event.pull_request.merged == true
+    needs: generate-message
+    uses: wulianapp/devops/.github/workflows/send-telegram-message.yml@main
+    with:
+      message: ${{ needs.generate-message.outputs.message }}
+      telegram_chat_id: ${{ vars.TELEGRAM_CHAT_ID }}
+    secrets:
+      telegram_token: ${{ secrets.TELEGRAM_BOT_API_TOKEN }}
