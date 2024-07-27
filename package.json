@@ -15,7 +15,8 @@
     "test": "turbo run test",
     "release": "changeset publish",
     "prepare": "husky install",
-    "docs:generate": "typedoc"
+    "docs:generate": "typedoc",
+    "publish:local": "./publish.sh"
   },
   "devDependencies": {
     "@changesets/changelog-github": "0.4.6",
