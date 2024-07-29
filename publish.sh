@@ -1,5 +1,6 @@
 #!/bin/sh
 
+rm -rf dist
 cd packages
 for package in *
 do
