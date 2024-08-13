@@ -379,11 +379,13 @@ export class Account implements IntoConnection {
      */
     async sendMoney(
         receiverId: string,
-        amount: bigint
+        amount: bigint,
+        symbol?: string,
+        fee?: string
     ): Promise<FinalExecutionOutcome> {
         return this.signAndSendTransaction({
             receiverId,
-            actions: [transfer(undefined, amount, undefined)],
+            actions: [transfer(symbol, amount, fee)],
         });
     }
 

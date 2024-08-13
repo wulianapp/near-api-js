@@ -1,5 +1,7 @@
 #!/bin/sh
 
+pnpm build
+
 rm -rf dist
 cd packages
 for package in *
