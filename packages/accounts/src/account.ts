@@ -114,6 +114,13 @@ interface SignedDelegateOptions {
     receiverId: string;
 }
 
+interface SignedDelegateOptionsNonce {
+    actions: Action[];
+    blockHeightTtl: number;
+    receiverId: string;
+    nonce: bigint;
+}
+
 /**
  * This class provides common account related RPC calls including signing transactions with a {@link "@near-js/crypto".key_pair.KeyPair | KeyPair}.
  */
@@ -589,6 +596,43 @@ export class Account implements IntoConnection {
             actions,
             maxBlockHeight: BigInt(header.height) + BigInt(blockHeightTtl),
             nonce: BigInt(accessKey.nonce) + BigInt(1),
+            publicKey,
+            receiverId,
+            senderId: this.accountId,
+        });
+
+        const { signedDelegateAction } = await signDelegateAction({
+            delegateAction,
+            signer: {
+                sign: async (message) => {
+                    const { signature } = await signer.signMessage(
+                        message,
+                        delegateAction.senderId,
+                        this.connection.networkId
+                    );
+
+                    return signature;
+                },
+            },
+        });
+
+        return signedDelegateAction;
+    }
+
+    async signedDelegateNonce({
+        actions,
+        blockHeightTtl,
+        receiverId,
+        nonce
+    }: SignedDelegateOptionsNonce): Promise<SignedDelegate> {
+        const { provider, signer } = this.connection;
+        const { header } = await provider.block({ finality: "final" });
+        const {  publicKey } = await this.findAccessKey(null, null);
+
+        const delegateAction = buildDelegateAction({
+            actions,
+            maxBlockHeight: BigInt(header.height) + BigInt(blockHeightTtl),
+            nonce,
             publicKey,
             receiverId,
             senderId: this.accountId,
