@@ -1,5 +1,5 @@
 // demonstrates how to use multiple providers with different API-KEYs
-const { providers } = require('near-api-js');
+const { providers } = require('chainless-api-ts');
 
 const RPC_API_ENDPOINT_1 = '<Replace this string with your RPC server URL>';
 const API_KEY_1 = '<Replace this string with your API KEY>';

@@ -1,4 +1,4 @@
-import { FinalExecutionOutcome } from '@near-js/types';
+import { FinalExecutionOutcome } from '@chainless-js/types';
 
 import { parseRpcError } from './errors';
 import { Logger } from './logger';

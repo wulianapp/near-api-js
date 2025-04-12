@@ -1,5 +1,5 @@
-import { BlockReference, ContractCodeView } from '@near-js/types';
-import { printTxOutcomeLogs } from '@near-js/utils';
+import { BlockReference, ContractCodeView } from '@chainless-js/types';
+import { printTxOutcomeLogs } from '@chainless-js/utils';
 import { FunctionCallOptions } from '../interface';
 import { Storage } from './storage';
 import { Runtime } from './runtime';

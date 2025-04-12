@@ -1,15 +1,15 @@
 # NEAR JavaScript API
 
-[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fnear%2Fnear-api-js%2Fbadge&style=flat&label=Build)](https://actions-badge.atrox.dev/near/near-api-js/goto)
-[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/near/near-api-js) 
+[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fnear%2Fchainless-api-ts%2Fbadge&style=flat&label=Build)](https://actions-badge.atrox.dev/near/chainless-api-ts/goto)
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/wulianapp/chainless-api-ts) 
 
 NEAR JavaScript API is a complete library to interact with the NEAR blockchain. You can use it in the browser, or in Node.js runtime.
 
 ## Documentation
 
-- [Learn how to use](https://docs.near.org/tools/near-api-js/quick-reference) the library in your project
+- [Learn how to use](https://docs.near.org/tools/chainless-api-ts/quick-reference) the library in your project
 
-- Read the [TypeDoc API](https://near.github.io/near-api-js/) documentation
+- Read the [TypeDoc API](https://near.github.io/chainless-api-ts/) documentation
 
 - [Cookbook](./packages/cookbook) with common use cases
 
@@ -44,7 +44,7 @@ Tests use sample contract from `near-hello` npm package, see https://github.com/
 
 Follow next steps:
 
-1. [Change hash for the commit with errors in the nearcore](https://github.com/near/near-api-js/blob/master/fetch_error_schema.js#L8-L9)
+1. [Change hash for the commit with errors in the nearcore](https://github.com/wulianapp/chainless-api-ts/blob/master/fetch_error_schema.js#L8-L9)
 2. Fetch new schema: `node fetch_error_schema.js`
 3. `pnpm build` to update `lib/**.js` files
 
@@ -53,24 +53,24 @@ Follow next steps:
 ![Package Architecture in Onion Diagram](./docs/package-architecture.png)
 <!-- https://www.figma.com/file/TzAPceViAbYW6A6KAuEMCe/NAJ-packages?t=N9nlkGBoAx9FYxoN-1 -->
 
-- [accounts](https://github.com/near/near-api-js/tree/master/packages/accounts) account creation & management
-- [crypto](https://github.com/near/near-api-js/tree/master/packages/crypto) cryptographic key pairs & signing
-- [keystores](https://github.com/near/near-api-js/tree/master/packages/keystores) general-purpose key persistence & management
-- [keystores-browser](https://github.com/near/near-api-js/tree/master/packages/keystores-browser) browser keystores
-- [keystores-node](https://github.com/near/near-api-js/tree/master/packages/keystores-node) NodeJS keystores
-- [providers](https://github.com/near/near-api-js/tree/master/packages/providers) RPC interaction
-- [transactions](https://github.com/near/near-api-js/tree/master/packages/transactions) transaction composition & signing
-- [types](https://github.com/near/near-api-js/tree/master/packages/types) common types
-- [utils](https://github.com/near/near-api-js/tree/master/packages/utils) common methods
-- [wallet-account](https://github.com/near/near-api-js/tree/master/packages/wallet-account) accounts in browser-based wallets
+- [accounts](https://github.com/wulianapp/chainless-api-ts/tree/master/packages/accounts) account creation & management
+- [crypto](https://github.com/wulianapp/chainless-api-ts/tree/master/packages/crypto) cryptographic key pairs & signing
+- [keystores](https://github.com/wulianapp/chainless-api-ts/tree/master/packages/keystores) general-purpose key persistence & management
+- [keystores-browser](https://github.com/wulianapp/chainless-api-ts/tree/master/packages/keystores-browser) browser keystores
+- [keystores-node](https://github.com/wulianapp/chainless-api-ts/tree/master/packages/keystores-node) NodeJS keystores
+- [providers](https://github.com/wulianapp/chainless-api-ts/tree/master/packages/providers) RPC interaction
+- [transactions](https://github.com/wulianapp/chainless-api-ts/tree/master/packages/transactions) transaction composition & signing
+- [types](https://github.com/wulianapp/chainless-api-ts/tree/master/packages/types) common types
+- [utils](https://github.com/wulianapp/chainless-api-ts/tree/master/packages/utils) common methods
+- [wallet-account](https://github.com/wulianapp/chainless-api-ts/tree/master/packages/wallet-account) accounts in browser-based wallets
 
 ## Example Templates
 
 To help you get started quickly, we have prepared example templates for popular frameworks:
 
 - [React Template](https://github.com/LimeChain/nearjs-react-app)
-- [Nuxt.js Template](https://github.com/near/near-api-js-template-nuxt)
-- [Angular Template](https://github.com/near/near-api-js-template-angular)
+- [Nuxt.js Template](https://github.com/wulianapp/chainless-api-ts-template-nuxt)
+- [Angular Template](https://github.com/wulianapp/chainless-api-ts-template-angular)
 
 ## License
 

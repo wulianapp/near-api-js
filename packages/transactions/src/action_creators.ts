@@ -1,4 +1,4 @@
-import { PublicKey } from '@near-js/crypto';
+import { PublicKey } from '@chainless-js/crypto';
 
 import {
     AccessKey,

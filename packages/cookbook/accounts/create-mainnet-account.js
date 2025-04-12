@@ -3,7 +3,7 @@ const HELP = `Please run this script in the following format:
   node create-mainnet-account.js CREATOR_ACCOUNT.near NEW_ACCOUNT.near AMOUNT"
 `;
 
-const { connect, KeyPair, keyStores, utils } = require("near-api-js");
+const { connect, KeyPair, keyStores, utils } = require("chainless-api-ts");
 const path = require("path");
 const homedir = require("os").homedir();
 

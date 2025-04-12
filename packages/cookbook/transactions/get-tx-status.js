@@ -1,9 +1,9 @@
 // demonstrates how to get a transaction status
-const { providers } = require("near-api-js");
+const { providers } = require("chainless-api-ts");
 
 //network config (replace testnet with mainnet or betanet)
 const provider = new providers.JsonRpcProvider(
-    "https://rpc-testnet.chainless.top"
+    "https://rpc-testnet.chainlessdw20.com"
 );
 
 const TX_HASH = "9wWoD7REWEigSaYoUrmqxnu3qXvfyNeBFJTxEDznsRrL";

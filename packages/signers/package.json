@@ -1,6 +1,6 @@
 {
-  "name": "@near-js/signers",
-  "version": "0.1.4",
+  "name": "@chainless-js/signers",
+  "version": "0.1.7",
   "description": "Core dependencies for the NEAR API JavaScript client",
   "main": "lib/index.js",
   "scripts": {
@@ -15,8 +15,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@near-js/crypto": "workspace:*",
-    "@near-js/keystores": "workspace:*",
+    "@chainless-js/crypto": "workspace:*",
+    "@chainless-js/keystores": "workspace:*",
     "@noble/hashes": "1.3.3"
   },
   "devDependencies": {

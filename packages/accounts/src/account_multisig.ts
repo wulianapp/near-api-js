@@ -1,6 +1,6 @@
-import { Action, actionCreators } from '@near-js/transactions';
-import { FinalExecutionOutcome } from '@near-js/types';
-import { Logger } from '@near-js/utils';
+import { Action, actionCreators } from '@chainless-js/transactions';
+import { FinalExecutionOutcome } from '@chainless-js/types';
+import { Logger } from '@chainless-js/utils';
 
 import { Account, SignAndSendTransactionOptions } from './account';
 import { Connection } from './connection';
@@ -202,7 +202,7 @@ export class AccountMultisig extends Account {
 
     async getRequestIds(): Promise<string[]> {
         // TODO: Read requests from state to allow filtering by expiration time
-        // TODO: https://github.com/near/core-contracts/blob/305d1db4f4f2cf5ce4c1ef3479f7544957381f11/multisig/src/lib.rs#L84
+        // TODO: https://github.com/wulianapp/core-contracts/blob/305d1db4f4f2cf5ce4c1ef3479f7544957381f11/multisig/src/lib.rs#L84
         return this.viewFunction({
             contractId: this.accountId,
             methodName: 'list_request_ids',

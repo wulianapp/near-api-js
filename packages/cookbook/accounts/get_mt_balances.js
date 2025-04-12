@@ -1,5 +1,5 @@
 // demonstrates how to use API-KEY with 'connect' function. 
-const { connect, keyStores } = require("near-api-js");
+const { connect, keyStores } = require("chainless-api-ts");
 const path = require("path");
 
 const homedir = require("os").homedir();
@@ -7,7 +7,7 @@ const CREDENTIALS_DIR = ".near-credentials";
 const credentialsPath = path.join(homedir, CREDENTIALS_DIR);
 const keyStore = new keyStores.UnencryptedFileSystemKeyStore(credentialsPath);
 
-const RPC_API_ENDPOINT = 'https://rpc-testnet.chainless.top';
+const RPC_API_ENDPOINT = 'https://rpc-testnet.chainlessdw20.com';
 const API_KEY = '';
 
 const ACCOUNT_ID = 'chainless';

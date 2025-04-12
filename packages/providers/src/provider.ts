@@ -3,7 +3,7 @@
  * @module
  */
 
-import { SignedTransaction } from '@near-js/transactions';
+import { SignedTransaction } from '@chainless-js/transactions';
 import {
     AccessKeyWithPublicKey,
     BlockChangeResult,
@@ -24,8 +24,8 @@ import {
     QueryResponseKind,
     RpcQueryRequest,
     EpochValidatorInfo,
-} from '@near-js/types';
-import { TxExecutionStatus } from '@near-js/types';
+} from '@chainless-js/types';
+import { TxExecutionStatus } from '@chainless-js/types';
 
 /** @hidden */
 export abstract class Provider {

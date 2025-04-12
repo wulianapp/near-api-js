@@ -1,8 +1,8 @@
-import { KeyPair } from '@near-js/crypto';
+import { KeyPair } from '@chainless-js/crypto';
 
 /**
- * KeyStores are passed to {@link "@near-js/wallet-account".near.Near | Near} via {@link "@near-js/wallet-account".near.NearConfig | NearConfig}
- * and are used by the {@link "@near-js/signers".in_memory_signer.InMemorySigner | InMemorySigner} to sign transactions.
+ * KeyStores are passed to {@link "@chainless-js/wallet-account".near.Near | Near} via {@link "@chainless-js/wallet-account".near.NearConfig | NearConfig}
+ * and are used by the {@link "@chainless-js/signers".in_memory_signer.InMemorySigner | InMemorySigner} to sign transactions.
  * 
  */
 export abstract class KeyStore {

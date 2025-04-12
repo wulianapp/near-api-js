@@ -1,5 +1,5 @@
-import { PublicKey } from '@near-js/crypto';
-import { Assignable } from '@near-js/types';
+import { PublicKey } from '@chainless-js/crypto';
+import { Assignable } from '@chainless-js/types';
 
 import { DelegateAction } from './delegate';
 import { Signature } from './signature';

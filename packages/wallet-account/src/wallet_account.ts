@@ -1,7 +1,7 @@
 /**
  * This module exposes two classes:
  * * {@link WalletConnection} which redirects users to [NEAR Wallet](https://wallet.near.org/) for key management.
- * * {@link ConnectedWalletAccount} is an {@link "@near-js/accounts".account.Account | Account} implementation that uses {@link WalletConnection} to get keys
+ * * {@link ConnectedWalletAccount} is an {@link "@chainless-js/accounts".account.Account | Account} implementation that uses {@link WalletConnection} to get keys
  * 
  * @module walletAccount
  */
@@ -9,13 +9,13 @@ import {
     Account,
     Connection,
     SignAndSendTransactionOptions,
-} from '@near-js/accounts';
-import { KeyPair, PublicKey } from '@near-js/crypto';
-import { KeyStore } from '@near-js/keystores';
-import { InMemorySigner } from '@near-js/signers';
-import { FinalExecutionOutcome } from '@near-js/types';
-import { baseDecode } from '@near-js/utils';
-import { Transaction, Action, SCHEMA, createTransaction } from '@near-js/transactions';
+} from '@chainless-js/accounts';
+import { KeyPair, PublicKey } from '@chainless-js/crypto';
+import { KeyStore } from '@chainless-js/keystores';
+import { InMemorySigner } from '@chainless-js/signers';
+import { FinalExecutionOutcome } from '@chainless-js/types';
+import { baseDecode } from '@chainless-js/utils';
+import { Transaction, Action, SCHEMA, createTransaction } from '@chainless-js/transactions';
 import { serialize } from 'borsh';
 
 import { Near } from './near';
@@ -48,7 +48,7 @@ interface RequestSignTransactionsOptions {
 /**
  * This class is not intended for use outside the browser. Without `window` (i.e. in server contexts), it will instantiate but will throw a clear error when used.
  * 
- * @see [https://docs.near.org/tools/near-api-js/quick-reference#wallet](https://docs.near.org/tools/near-api-js/quick-reference#wallet)
+ * @see [https://docs.near.org/tools/chainless-api-ts/quick-reference#wallet](https://docs.near.org/tools/chainless-api-ts/quick-reference#wallet)
  * @example
  * ```js
  * // create new WalletConnection instance
@@ -404,7 +404,7 @@ export class ConnectedWalletAccount extends Account {
             const { receiver_id: allowedReceiverId, method_names: allowedMethods } = permission.FunctionCall;
             /********************************
             Accept multisig access keys and let wallets attempt to signAndSendTransaction
-            If an access key has itself as receiverId and method permission add_request_and_confirm, then it is being used in a wallet with multisig contract: https://github.com/near/core-contracts/blob/671c05f09abecabe7a7e58efe942550a35fc3292/multisig/src/lib.rs#L149-L153
+            If an access key has itself as receiverId and method permission add_request_and_confirm, then it is being used in a wallet with multisig contract: https://github.com/wulianapp/core-contracts/blob/671c05f09abecabe7a7e58efe942550a35fc3292/multisig/src/lib.rs#L149-L153
             ********************************/
             if (allowedReceiverId === this.accountId && allowedMethods.includes(MULTISIG_HAS_METHOD)) {
                 return true;

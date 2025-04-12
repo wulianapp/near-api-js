@@ -1,4 +1,4 @@
-const { connect, transactions, keyStores } = require("near-api-js");
+const { connect, transactions, keyStores } = require("chainless-api-ts");
 const fs = require("fs");
 const path = require("path");
 const homedir = require("os").homedir();
@@ -15,7 +15,7 @@ const keyStore = new keyStores.UnencryptedFileSystemKeyStore(credentialsPath);
 const config = {
     keyStore,
     networkId: "testnet",
-    nodeUrl: "https://rpc-testnet.chainless.top",
+    nodeUrl: "https://rpc-testnet.chainlessdw20.com",
 };
 
 sendTransactions();

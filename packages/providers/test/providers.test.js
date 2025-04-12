@@ -1,4 +1,4 @@
-const { getTransactionLastResult } = require('@near-js/utils');
+const { getTransactionLastResult } = require('@chainless-js/utils');
 const { Worker } = require('near-workspaces');
 const { JsonRpcProvider, FailoverRpcProvider } = require('../lib');
 

@@ -1,6 +1,6 @@
 {
-  "name": "@near-js/keystores-browser",
-  "version": "0.0.12",
+  "name": "@chainless-js/keystores-browser",
+  "version": "0.0.15",
   "description": "KeyStore implementation for working with keys in browser LocalStorage",
   "main": "lib/index.js",
   "scripts": {
@@ -16,8 +16,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@near-js/crypto": "workspace:*",
-    "@near-js/keystores": "workspace:*"
+    "@chainless-js/crypto": "workspace:*",
+    "@chainless-js/keystores": "workspace:*"
   },
   "devDependencies": {
     "jest": "26.0.1",

@@ -1,5 +1,5 @@
 import { LRUMap } from 'lru_map';
-import { BlockHash, BlockReference } from '@near-js/types';
+import { BlockHash, BlockReference } from '@chainless-js/types';
 import { ContractState } from './types';
 
 export interface StorageData {

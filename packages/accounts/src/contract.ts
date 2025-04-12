@@ -1,5 +1,5 @@
-import { getTransactionLastResult, Logger } from "@near-js/utils";
-import { ArgumentTypeError, PositionalArgsError } from "@near-js/types";
+import { getTransactionLastResult, Logger } from "@chainless-js/utils";
+import { ArgumentTypeError, PositionalArgsError } from "@chainless-js/types";
 import { LocalViewExecution } from "./local-view-execution";
 import validator from "is-my-json-valid";
 import depd from "depd";
@@ -125,10 +125,10 @@ export interface ContractMethods {
 /**
  * Defines a smart contract on NEAR including the change (mutable) and view (non-mutable) methods
  *
- * @see [https://docs.near.org/tools/near-api-js/quick-reference#contract](https://docs.near.org/tools/near-api-js/quick-reference#contract)
+ * @see [https://docs.near.org/tools/chainless-api-ts/quick-reference#contract](https://docs.near.org/tools/chainless-api-ts/quick-reference#contract)
  * @example
  * ```js
- * import { Contract } from 'near-api-js';
+ * import { Contract } from 'chainless-api-ts';
  *
  * async function contractExample() {
  *   const methodOptions = {

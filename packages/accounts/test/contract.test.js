@@ -1,4 +1,4 @@
-const { PositionalArgsError } = require('@near-js/types');
+const { PositionalArgsError } = require('@chainless-js/types');
 
 const { Contract, Account } = require('../lib');
 const testUtils  = require('./test-utils');

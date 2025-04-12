@@ -27,19 +27,19 @@ We take community contributions very seriously, as we understand you invest prec
 
 If you want to ask a question please use the following resources available for you:
 
-- [Docs site](https://docs.near.org/tools/near-api-js/quick-reference)
+- [Docs site](https://docs.near.org/tools/chainless-api-ts/quick-reference)
 - Post a message on our [Discord](https://near.chat/)
 - Post a question on [StackOverflow with `[nearprotocol]` tag](https://stackoverflow.com/questions/tagged/nearprotocol)
-- Post a question on [GitHub Discussions](https://github.com/near/near-api-js/discussions)
+- Post a question on [GitHub Discussions](https://github.com/wulianapp/chainless-api-ts/discussions)
 
 ## Get Involved
 
 There are many ways to contribute to this project, and many of them do not involve writing any code. Here's a few ideas to get started:
 
-- Simply start using the library. Go through the [user guide](https://docs.near.org/tools/near-api-js/quick-reference). Does everything work as expected? If not, we're always looking for improvements. Let us know on [GitHub Discussions](https://github.com/near/near-api-js/discussions).
-- Look through the [open issues](https://github.com/near/near-api-js/issues). Provide workarounds or ask for clarification.
-- If you find an issue you would like to fix, [open a pull request](#pull-requests). Issues tagged as [_Good first issue_](https://github.com/near/near-api-js/labels/good_first_issue) are a good place to get started.
-- Take a look at the [enhancements requested](https://github.com/near/near-api-js/labels/enhancement) by others in the community and consider opening a pull request if you see something you want to work on.
+- Simply start using the library. Go through the [user guide](https://docs.near.org/tools/chainless-api-ts/quick-reference). Does everything work as expected? If not, we're always looking for improvements. Let us know on [GitHub Discussions](https://github.com/wulianapp/chainless-api-ts/discussions).
+- Look through the [open issues](https://github.com/wulianapp/chainless-api-ts/issues). Provide workarounds or ask for clarification.
+- If you find an issue you would like to fix, [open a pull request](#pull-requests). Issues tagged as [_Good first issue_](https://github.com/wulianapp/chainless-api-ts/labels/good_first_issue) are a good place to get started.
+- Take a look at the [enhancements requested](https://github.com/wulianapp/chainless-api-ts/labels/enhancement) by others in the community and consider opening a pull request if you see something you want to work on.
 
 If you think you need help planning your contribution, please ping us on [Discord](https://near.chat) and let us know you are looking for a bit of help.
 
@@ -59,26 +59,26 @@ Our core team works directly in the public repo, and pull requests are checked b
 
 **Branch organization**: This project has one primary branch `master` and we use feature branches with deploy previews to deliver new features with pull requests.
 
-**Issue templates**: When [opening a new issue](https://github.com/near/near-api-js/issues/new/choose), always **make sure to fill out the issue template**. The issue template is very important, as it sets mutual expectations about what you plan to do, and help us prepare to accept your contribution.
+**Issue templates**: When [opening a new issue](https://github.com/wulianapp/chainless-api-ts/issues/new/choose), always **make sure to fill out the issue template**. The issue template is very important, as it sets mutual expectations about what you plan to do, and help us prepare to accept your contribution.
 
-**Bugs**: If you would like to report a problem use the [bug report](https://github.com/near/near-api-js/issues/new?assignees=&template=bug.yml) issue template.
+**Bugs**: If you would like to report a problem use the [bug report](https://github.com/wulianapp/chainless-api-ts/issues/new?assignees=&template=bug.yml) issue template.
 
 **Security Bugs**: To report security issues in this project please send an email to [security@near.org](mailto:security@near.org)
 
 **New features and enhancements**:
 
-If you have a casual feature request or proposal, you can raise it in our [GitHub Discussions](https://github.com/near/near-api-js/discussions/categories/ideas).
+If you have a casual feature request or proposal, you can raise it in our [GitHub Discussions](https://github.com/wulianapp/chainless-api-ts/discussions/categories/ideas).
 
-If you'd like to work on a PR with an implementation of your proposal, please file an issue with the [feature template](https://github.com/near/near-api-js/issues/new?template=feature.yml) in the form of an **elaborated RFC**. Please wait for our team to respond with an approval before you start working on it, as we can only accept PRs that are aligned with project's goals and roadmap, so we really want to avoid situations where we reject something you worked hard on. (BTW, if you think that project's goals or roadmap should change in some way, do feel free to raise it in [GitHub Discussions](https://github.com/near/near-api-js/discussions/) :)  and we'll talk about it). 
+If you'd like to work on a PR with an implementation of your proposal, please file an issue with the [feature template](https://github.com/wulianapp/chainless-api-ts/issues/new?template=feature.yml) in the form of an **elaborated RFC**. Please wait for our team to respond with an approval before you start working on it, as we can only accept PRs that are aligned with project's goals and roadmap, so we really want to avoid situations where we reject something you worked hard on. (BTW, if you think that project's goals or roadmap should change in some way, do feel free to raise it in [GitHub Discussions](https://github.com/wulianapp/chainless-api-ts/discussions/) :)  and we'll talk about it). 
 
 ### Claiming issues
  
-We have a list of [beginner-friendly issues](https://github.com/near/near-api-js/labels/good_first_issue) to help you get you get started with the codebase and familiar with our contribution process. This is a great place to start.
+We have a list of [beginner-friendly issues](https://github.com/wulianapp/chainless-api-ts/labels/good_first_issue) to help you get you get started with the codebase and familiar with our contribution process. This is a great place to start.
 
 Apart from the `good first issue`, the following labels are also worth looking at:
 
-- [`help wanted`](https://github.com/near/near-api-js/labels/help%20wanted): if you have specific knowledge in one domain, working on these issues can make your expertise shine.
-- [`accepting pr`](https://github.com/near/near-api-js/labels/status%3A%20accepting%20pr): community contributors can feel free to claim any of these.
+- [`help wanted`](https://github.com/wulianapp/chainless-api-ts/labels/help%20wanted): if you have specific knowledge in one domain, working on these issues can make your expertise shine.
+- [`accepting pr`](https://github.com/wulianapp/chainless-api-ts/labels/status%3A%20accepting%20pr): community contributors can feel free to claim any of these.
 
 If you want to work on any of these issues, just drop a message saying "I'd like to work on this", and we will assign the issue to you and update the issue's status as "claimed". **You are expected to send a pull request within seven days** after that, so we can still delegate the issue to someone else if you are unavailable.
 
@@ -93,7 +93,7 @@ You can use Gitpod (a free, online, VS Code-like IDE) for contributing. With a s
 
 So that you can start contributing straight away.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/near/near-api-js)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/wulianapp/chainless-api-ts)
 
 ## Pull Requests
 
@@ -112,7 +112,7 @@ All pull requests should be opened against the `master` branch.
 
 ### Versioned TypeDocs
 
-Each time we publish a version of the package we also publish a version of the [TypeDocs](https://docs.near.org/tools/near-api-js/reference).
+Each time we publish a version of the package we also publish a version of the [TypeDocs](https://docs.near.org/tools/chainless-api-ts/reference).
 
 - If you touch the public API please make sure the TypeDocs reflect your changes well.
 - If you just want to fix the TypeDocs for current version, let us know in the PR, and we'll publish your fix onto the current TypeDocs.

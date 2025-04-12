@@ -1,4 +1,4 @@
-const { baseEncode } = require('@near-js/utils');
+const { baseEncode } = require('@chainless-js/utils');
 const { sha256 } = require('@noble/hashes/sha256');
 const { KeyPair, KeyPairEd25519, PublicKey } = require('../lib');
 

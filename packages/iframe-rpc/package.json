@@ -1,6 +1,6 @@
 {
-  "name": "@near-js/iframe-rpc",
-  "version": "0.0.2",
+  "name": "@chainless-js/iframe-rpc",
+  "version": "0.0.5",
   "description": "IFrame RPC client/server implementation",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

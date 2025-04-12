@@ -1,6 +1,6 @@
 # NEAR JavaScript API Cookbook
 
-Collection of common use cases for [`near-api-js`](https://github.com/near/near-api-js).
+Collection of common use cases for [`chainless-api-ts`](https://github.com/wulianapp/chainless-api-ts).
 
 |                                                                 |                                                                                                                  |
 |-----------------------------------------------------------------| ---------------------------------------------------------------------------------------------------------------- |

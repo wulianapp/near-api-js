@@ -1,10 +1,10 @@
-import { KeyPair } from '@near-js/crypto';
-import { KeyStore } from '@near-js/keystores';
+import { KeyPair } from '@chainless-js/crypto';
+import { KeyStore } from '@chainless-js/keystores';
 import fs from 'fs';
 import path from 'path';
 import { promisify as _promisify } from 'util';
 
-/* remove for versions not referenced by near-api-js */
+/* remove for versions not referenced by chainless-api-ts */
 const promisify = (fn: any) => {
     if (!fn) {
         return () => {
@@ -62,7 +62,7 @@ export async function readKeyFile(filename: string): Promise<[string, KeyPair]> 
  * @example
  * ```js
  * const { homedir } = require('os');
- * const { connect, keyStores } = require('near-api-js');
+ * const { connect, keyStores } = require('chainless-api-ts');
  * 
  * const keyStore = new keyStores.UnencryptedFileSystemKeyStore(`${homedir()}/.near-credentials`);
  * const config = { 

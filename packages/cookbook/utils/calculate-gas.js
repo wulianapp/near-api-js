@@ -1,4 +1,4 @@
-const { connect, keyStores, utils } = require("near-api-js");
+const { connect, keyStores, utils } = require("chainless-api-ts");
 const path = require("path");
 const homedir = require("os").homedir();
 const chalk = require("chalk");
@@ -20,7 +20,7 @@ const keyStore = new keyStores.UnencryptedFileSystemKeyStore(credentialsPath);
 const config = {
   keyStore,
   networkId: "testnet",
-  nodeUrl: "https://rpc-testnet.chainless.top",
+  nodeUrl: "https://rpc-testnet.chainlessdw20.com",
 };
 
 calculateGas(CONTRACT_ID, METHOD_NAME, args, ATTACHED_DEPOSIT);

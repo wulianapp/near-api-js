@@ -1,11 +1,11 @@
-const { Account } = require("@near-js/accounts");
-const { UnencryptedFileSystemKeyStore } = require("@near-js/keystores-node");
-const { JsonRpcProvider, fetchJson } = require("@near-js/providers");
-const { InMemorySigner } = require("@near-js/signers");
+const { Account } = require("@chainless-js/accounts");
+const { UnencryptedFileSystemKeyStore } = require("@chainless-js/keystores-node");
+const { JsonRpcProvider, fetchJson } = require("@chainless-js/providers");
+const { InMemorySigner } = require("@chainless-js/signers");
 const {
     actionCreators,
     encodeSignedDelegate,
-} = require("@near-js/transactions");
+} = require("@chainless-js/transactions");
 const os = require("os");
 const path = require("path");
 
@@ -34,7 +34,7 @@ if (require.main === module) {
     (async function () {
         const networkId = "testnet";
         const provider = new JsonRpcProvider({
-            url: "https://rpc-testnet.chainless.top",
+            url: "https://rpc-testnet.chainlessdw20.com",
         });
 
         const CREDENTIALS_DIR = ".near-credentials";

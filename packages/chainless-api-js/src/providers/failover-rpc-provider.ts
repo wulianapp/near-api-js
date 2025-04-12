@@ -1,0 +1,1 @@
+export { FailoverRpcProvider } from '@chainless-js/providers';

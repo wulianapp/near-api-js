@@ -1,14 +1,14 @@
-# Migrating from near-api-js to @near-js
+# Migrating from chainless-api-ts to @chainless-js
 
-The `near-api-js@>=2` package now uses the `@near-js/*` packages for most of its functionality. Minimal code
-was changed as part of this migration, so if you are using `near-api-js@<=1.1.0` your imports will continue
+The `chainless-api-ts@>=2` package now uses the `@chainless-js/*` packages for most of its functionality. Minimal code
+was changed as part of this migration, so if you are using `chainless-api-ts@<=1.1.0` your imports will continue
 to resolve correctly.
 
-Moving to the `@near-js/*` packages in your own code is a matter of finding the corresponding export in
+Moving to the `@chainless-js/*` packages in your own code is a matter of finding the corresponding export in
 the new package. Below, broken down by domain, are the old and new style imports side by side:
 
 ### Accounts
-`near-api-js`
+`chainless-api-ts`
 ```ts
 import {
     Account,
@@ -16,7 +16,7 @@ import {
     Connection,
     Contract,
     multisig,
-} from 'near-api-js';
+} from 'chainless-api-ts';
 const {
     AccountCreator,
     LocalAccountCreator,
@@ -36,7 +36,7 @@ const {
 } = multisig;
 ```
 
-`@near-js/accounts`
+`@chainless-js/accounts`
 ```ts
 
 import {
@@ -56,37 +56,37 @@ import {
     MultisigDeleteRequestRejectionError,
     MultisigStateStatus,
     UrlAccountCreator,
-} from '@near-js/accounts';
+} from '@chainless-js/accounts';
 ```
 
 ### Cryptography
-`near-api-js`
+`chainless-api-ts`
 ```ts
 import {
     KeyPair,
     utils,
-} from 'near-api-js';
+} from 'chainless-api-ts';
 const {
     KeyPairEd25519,
     PublicKey,
 } = utils;
 ```
 
-`@near-js/crypto`
+`@chainless-js/crypto`
 ```ts
 import {
     KeyPair,
     KeyPairEd25519,
     PublicKey,
-} from '@near-js/crypto';
+} from '@chainless-js/crypto';
 ```
 
 ### Keystores
-`near-api-js`
+`chainless-api-ts`
 ```ts
 import {
     keyStores,
-} from 'near-api-js';
+} from 'chainless-api-ts';
 const {
     KeyStore,
     InMemoryKeyStore,
@@ -96,36 +96,36 @@ const {
 } = keyStores;
 ```
 
-`@near-js/keystores`
+`@chainless-js/keystores`
 ```ts
 import {
     InMemoryKeyStore,
     KeyStore,
     MergeKeyStore,
-} from '@near-js/keystores';
+} from '@chainless-js/keystores';
 ```
 
-`@near-js/keystores-browser`
+`@chainless-js/keystores-browser`
 ```ts
 import {
     BrowserLocalStorageKeyStore,
-} from '@near-js/keystores-browser';
+} from '@chainless-js/keystores-browser';
 ```
 
-`@near-js/keystores-node`
+`@chainless-js/keystores-node`
 ```ts
 import {
     UnencryptedFileSystemKeyStore,
-} from '@near-js/keystores-node';
+} from '@chainless-js/keystores-node';
 ```
 
 ### Providers
-`near-api-js`
+`chainless-api-ts`
 ```ts
 import {
     providers,
     utils,
-} from 'near-api-js';
+} from 'chainless-api-ts';
 const {
     ErrorContext,
     ExecutionOutcomeWithId,
@@ -139,17 +139,17 @@ const {
 } = providers;
 ```
 
-`@near-js/providers`
+`@chainless-js/providers`
 ```ts
 import {
     exponentialBackoff,
     fetchJson,
     JsonRpcProvider,
     Provider,
-} from '@near-js/providers';
+} from '@chainless-js/providers';
 ```
 
-`@near-js/types`
+`@chainless-js/types`
 ```ts
 import {
     ErrorContext,
@@ -158,39 +158,39 @@ import {
     FinalExecutionStatus,
     FinalExecutionStatusBasic,
     TypedError,
-} from '@near-js/types';
+} from '@chainless-js/types';
 ```
 
-`@near-js/utils`
+`@chainless-js/utils`
 ```ts
 import {
     getTransactionLastResult,
-} from '@near-js/utils';
+} from '@chainless-js/utils';
 ```
 
 ### Signers
-`near-api-js`
+`chainless-api-ts`
 ```ts
 import {
     InMemorySigner,
     Signer,
-} from 'near-api-js';
+} from 'chainless-api-ts';
 ```
 
-`@near-js/providers`
+`@chainless-js/providers`
 ```ts
 import {
     InMemorySigner,
     Signer,
-} from '@near-js/signers';
+} from '@chainless-js/signers';
 ```
 
 ### Transactions
-`near-api-js`
+`chainless-api-ts`
 ```ts
 import {
     transactions,
-} from 'near-api-js';
+} from 'chainless-api-ts';
 const {
     addKey,
     createAccount,
@@ -225,7 +225,7 @@ const {
 } = transactions;
 ```
 
-`@near-js/transactions`
+`@chainless-js/transactions`
 ```ts
 import {
     AccessKey,
@@ -249,7 +249,7 @@ import {
     SCHEMA,
     signTransaction,
     stringifyJsonOrBytes,
-} from '@near-js/transactions';
+} from '@chainless-js/transactions';
 const {
     addKey,
     createAccount,
@@ -265,13 +265,13 @@ const {
 ```
 
 ### Utils
-`near-api-js`
+`chainless-api-ts`
 ```ts
 import {
     DEFAULT_FUNCTION_CALL_GAS,
     utils,
     validators,
-} from 'near-api-js';
+} from 'chainless-api-ts';
 const {
     format,
     logWarning,
@@ -299,7 +299,7 @@ const {
 } = validators;
 ```
 
-`@near-js/utils`
+`@chainless-js/utils`
 ```ts
 import {
     DEFAULT_FUNCTION_CALL_GAS,
@@ -318,5 +318,5 @@ import {
     parseResultError,
     parseRpcError,
     Logger
-} from '@near-js/utils';
+} from '@chainless-js/utils';
 ```

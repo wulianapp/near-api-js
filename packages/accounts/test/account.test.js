@@ -1,6 +1,6 @@
-const { getTransactionLastResult, Logger } = require('@near-js/utils');
-const { actionCreators } = require('@near-js/transactions');
-const { TypedError } = require('@near-js/types');
+const { getTransactionLastResult, Logger } = require('@chainless-js/utils');
+const { actionCreators } = require('@chainless-js/transactions');
+const { TypedError } = require('@chainless-js/types');
 const fs = require('fs');
 
 const { Account, Contract } = require('../lib');

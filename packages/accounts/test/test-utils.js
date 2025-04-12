@@ -1,5 +1,5 @@
-const { KeyPair } = require('@near-js/crypto');
-const { InMemoryKeyStore } = require('@near-js/keystores');
+const { KeyPair } = require('@chainless-js/crypto');
+const { InMemoryKeyStore } = require('@chainless-js/keystores');
 const fs = require('fs').promises;
 const path = require('path');
 

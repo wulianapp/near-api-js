@@ -1,6 +1,6 @@
 {
-  "name": "@near-js/wallet-account",
-  "version": "1.2.2",
+  "name": "@chainless-js/wallet-account",
+  "version": "1.2.6",
   "description": "Dependencies for the NEAR API JavaScript client in the browser",
   "main": "lib/index.js",
   "scripts": {
@@ -12,14 +12,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@near-js/accounts": "workspace:*",
-    "@near-js/crypto": "workspace:*",
-    "@near-js/keystores": "workspace:*",
-    "@near-js/signers": "workspace:*",
-    "@near-js/transactions": "workspace:*",
-    "@near-js/types": "workspace:*",
-    "@near-js/utils": "workspace:*",
-    "@near-js/providers": "workspace:*",
+    "@chainless-js/accounts": "workspace:*",
+    "@chainless-js/crypto": "workspace:*",
+    "@chainless-js/keystores": "workspace:*",
+    "@chainless-js/signers": "workspace:*",
+    "@chainless-js/transactions": "workspace:*",
+    "@chainless-js/types": "workspace:*",
+    "@chainless-js/utils": "workspace:*",
+    "@chainless-js/providers": "workspace:*",
     "borsh": "1.0.0"
   },
   "devDependencies": {

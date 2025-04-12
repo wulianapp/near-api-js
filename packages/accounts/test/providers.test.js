@@ -1,8 +1,8 @@
 const base58 = require('bs58');
 
 const testUtils = require('./test-utils');
-const { KeyPair } = require('@near-js/crypto');
-let ERRORS_JSON = require('@near-js/utils/lib/errors/error_messages.json');
+const { KeyPair } = require('@chainless-js/crypto');
+let ERRORS_JSON = require('@chainless-js/utils/lib/errors/error_messages.json');
 
 jest.setTimeout(60000);
 

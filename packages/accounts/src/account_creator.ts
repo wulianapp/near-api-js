@@ -1,5 +1,5 @@
-import { PublicKey } from '@near-js/crypto';
-import { fetchJson } from '@near-js/providers';
+import { PublicKey } from '@chainless-js/crypto';
+import { fetchJson } from '@chainless-js/providers';
 
 import { Connection } from './connection';
 import { Account } from './account';

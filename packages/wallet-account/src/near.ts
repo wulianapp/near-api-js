@@ -1,9 +1,9 @@
 /**
  * This module contains the main class developers will use to interact with NEAR.
- * The {@link Near} class is used to interact with {@link "@near-js/accounts".account.Account | Account} through the {@link "@near-js/providers".json-rpc-provider.JsonRpcProvider | JsonRpcProvider}.
+ * The {@link Near} class is used to interact with {@link "@chainless-js/accounts".account.Account | Account} through the {@link "@chainless-js/providers".json-rpc-provider.JsonRpcProvider | JsonRpcProvider}.
  * It is configured via the {@link NearConfig}.
  * 
- * @see [https://docs.near.org/tools/near-api-js/quick-reference#account](https://docs.near.org/tools/near-api-js/quick-reference#account)
+ * @see [https://docs.near.org/tools/chainless-api-ts/quick-reference#account](https://docs.near.org/tools/chainless-api-ts/quick-reference#account)
  * 
  * @module near
  */
@@ -13,22 +13,22 @@ import {
     Connection,
     LocalAccountCreator,
     UrlAccountCreator,
-} from '@near-js/accounts';
-import { PublicKey } from '@near-js/crypto';
-import { KeyStore } from '@near-js/keystores';
-import { Signer } from '@near-js/signers';
-import { LoggerService } from '@near-js/utils';
-import { Provider } from '@near-js/providers';
+} from '@chainless-js/accounts';
+import { PublicKey } from '@chainless-js/crypto';
+import { KeyStore } from '@chainless-js/keystores';
+import { Signer } from '@chainless-js/signers';
+import { LoggerService } from '@chainless-js/utils';
+import { Provider } from '@chainless-js/providers';
 
 export interface NearConfig {
-    /** Holds {@link "@near-js/crypto".key_pair.KeyPair | KeyPair} for signing transactions */
+    /** Holds {@link "@chainless-js/crypto".key_pair.KeyPair | KeyPair} for signing transactions */
     keyStore?: KeyStore;
 
     /** @hidden */
     signer?: Signer;
 
     /**
-     * [NEAR Contract Helper](https://github.com/near/near-contract-helper) url used to create accounts if no master account is provided
+     * [NEAR Contract Helper](https://github.com/wulianapp/near-contract-helper) url used to create accounts if no master account is provided
      * @see {@link UrlAccountCreator}
      */
     helperUrl?: string;
@@ -46,19 +46,19 @@ export interface NearConfig {
     masterAccount?: string;
 
     /**
-     * {@link "@near-js/crypto".key_pair.KeyPair | KeyPair} are stored in a {@link KeyStore} under the `networkId` namespace.
+     * {@link "@chainless-js/crypto".key_pair.KeyPair | KeyPair} are stored in a {@link KeyStore} under the `networkId` namespace.
      */
     networkId: string;
 
     /**
      * NEAR RPC API url. used to make JSON RPC calls to interact with NEAR.
-     * @see {@link "@near-js/providers".json-rpc-provider.JsonRpcProvider | JsonRpcProvider}
+     * @see {@link "@chainless-js/providers".json-rpc-provider.JsonRpcProvider | JsonRpcProvider}
      */
     nodeUrl: string;
 
     /**
      * NEAR RPC API headers. Can be used to pass API KEY and other parameters.
-     * @see {@link "@near-js/providers".json-rpc-provider.JsonRpcProvider | JsonRpcProvider}
+     * @see {@link "@chainless-js/providers".json-rpc-provider.JsonRpcProvider | JsonRpcProvider}
      */
     headers?: { [key: string]: string | number };
 
@@ -83,8 +83,8 @@ export interface NearConfig {
     logger?: LoggerService | false;
     /**
      * Specifies NEAR RPC API connections, and is used to make JSON RPC calls to interact with NEAR
-     * @see {@link "@near-js/providers".json-rpc-provider.JsonRpcProvider | JsonRpcProvider}
-     * @see {@link "@near-js/providers".json-rpc-provider.FailoverRpcProvider | FailoverRpcProvider}
+     * @see {@link "@chainless-js/providers".json-rpc-provider.JsonRpcProvider | JsonRpcProvider}
+     * @see {@link "@chainless-js/providers".json-rpc-provider.FailoverRpcProvider | FailoverRpcProvider}
      * @see [List of available and public JSON RPC endpoints](https://docs.near.org/api/rpc/providers)
      */
     provider?: Provider;

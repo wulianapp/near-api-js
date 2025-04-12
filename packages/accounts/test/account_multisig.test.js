@@ -1,7 +1,7 @@
-const { parseNearAmount } = require('@near-js/utils');
-const { KeyPair } = require('@near-js/crypto');
-const { InMemorySigner } = require('@near-js/signers');
-const { actionCreators } = require('@near-js/transactions');
+const { parseNearAmount } = require('@chainless-js/utils');
+const { KeyPair } = require('@chainless-js/crypto');
+const { InMemorySigner } = require('@chainless-js/signers');
+const { actionCreators } = require('@chainless-js/transactions');
 const fs = require('fs');
 const semver = require('semver');
 

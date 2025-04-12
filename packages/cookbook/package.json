@@ -1,19 +1,19 @@
 {
-  "name": "@near-js/cookbook",
+  "name": "@chainless-js/cookbook",
   "private": true,
-  "version": "1.0.19",
+  "version": "1.0.22",
   "description": "",
   "main": "main.js",
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@near-js/accounts": "workspace:*",
-    "@near-js/keystores-node": "workspace:*",
-    "@near-js/providers": "workspace:*",
-    "@near-js/signers": "workspace:*",
-    "@near-js/transactions": "workspace:*",
+    "@chainless-js/accounts": "workspace:*",
+    "@chainless-js/keystores-node": "workspace:*",
+    "@chainless-js/providers": "workspace:*",
+    "@chainless-js/signers": "workspace:*",
+    "@chainless-js/transactions": "workspace:*",
     "chalk": "4.1.1",
     "homedir": "0.6.0",
-    "near-api-js": "workspace:*"
+    "chainless-api-ts": "workspace:*"
   }
 }

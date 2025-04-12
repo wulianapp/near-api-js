@@ -3,27 +3,27 @@
 
   
 
-@near-js/biometric-ed25519 package contains interfaces to assist the implementation of biometric driven web3 authentication. 
+@chainless-js/biometric-ed25519 package contains interfaces to assist the implementation of biometric driven web3 authentication. 
   
 
 ## Installation and Usage
 
   
 
-The easiest way to use NEAR Web 3 Authentication is to install the [`biometric-ed25519`](https://www.npmjs.com/package/@near-js/biometric-ed25519) package from the NPM registry.
+The easiest way to use NEAR Web 3 Authentication is to install the [`biometric-ed25519`](https://www.npmjs.com/package/@chainless-js/biometric-ed25519) package from the NPM registry.
   
 
 ```bash
 
 # Using Yarn
 
-yarn add @near-js/biometric-ed25519 
+yarn add @chainless-js/biometric-ed25519 
 
   
 
 # Using NPM.
 
-npm install @near-js/biometric-ed25519 
+npm install @chainless-js/biometric-ed25519 
 
 ```
 
@@ -32,7 +32,7 @@ Then in your dApp:
   
 
 ```ts
-import { createKey, getKeys } from  "@near-js/biometric-ed25519";
+import { createKey, getKeys } from  "@chainless-js/biometric-ed25519";
 
 // To register with userName
 const key = await createKey(userName);

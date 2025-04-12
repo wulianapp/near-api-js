@@ -1,5 +1,5 @@
 // demonstrates how to use API-KEY with 'connect' function. 
-const { connect, keyStores } = require("near-api-js");
+const { connect, keyStores } = require("chainless-api-ts");
 const path = require("path");
 
 const homedir = require("os").homedir();

@@ -1,5 +1,5 @@
-import { TypedError } from '@near-js/types';
-import { Logger } from '@near-js/utils';
+import { TypedError } from '@chainless-js/types';
+import { Logger } from '@chainless-js/utils';
 import createError from 'http-errors';
 
 import { exponentialBackoff } from './exponential-backoff';

@@ -9,14 +9,14 @@ body:
 
         - This is for feature request including a real API design, not just a basic idea.
         - The design does not have to be perfect, we'll discuss it if needed.
-        - For a more "casual" feature request, consider using GitHub Discussions instead: https://github.com/near/near-api-js/discussions/categories/ideas
+        - For a more "casual" feature request, consider using GitHub Discussions instead: https://github.com/wulianapp/chainless-api-ts/discussions/categories/ideas
 
 
   - type: checkboxes
     attributes:
       label: Have you read the Contributing Guidelines?
       options:
-        - label: I have read the [Contributing Guidelines on issues](https://github.com/near/near-api-js/blob/master/CONTRIBUTING.md).
+        - label: I have read the [Contributing Guidelines on issues](https://github.com/wulianapp/chainless-api-ts/blob/master/CONTRIBUTING.md).
           required: true
 
   - type: textarea
@@ -29,7 +29,7 @@ body:
   - type: input
     attributes:
       label: Has this been requested on GitHub Discussions?
-      description: Please post the [GitHub Discussions](https://github.com/near/near-api-js/discussions/categories/ideas) link, it is helpful to see how much interest there is for this feature.
+      description: Please post the [GitHub Discussions](https://github.com/wulianapp/chainless-api-ts/discussions/categories/ideas) link, it is helpful to see how much interest there is for this feature.
 
   - type: textarea
     attributes:
@@ -46,7 +46,7 @@ body:
         
         Please explain in an exhaustive way what are the config options and their respective effects.
         
-        > **What happens if you skip this step?** This issue may be closed without any in-depth discussion. Your feature request is just an idea for now, please use GitHub Discussions for that: https://github.com/near/near-api-js/discussions/categories/ideas
+        > **What happens if you skip this step?** This issue may be closed without any in-depth discussion. Your feature request is just an idea for now, please use GitHub Discussions for that: https://github.com/wulianapp/chainless-api-ts/discussions/categories/ideas
 
 
   - type: checkboxes

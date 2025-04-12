@@ -1,8 +1,8 @@
-const { KeyPair, PublicKey } = require('@near-js/crypto');
-const { InMemoryKeyStore } = require('@near-js/keystores');
-const { InMemorySigner } = require('@near-js/signers');
-const { baseDecode } = require('@near-js/utils');
-const { actionCreators, createTransaction, SCHEMA } = require('@near-js/transactions');
+const { KeyPair, PublicKey } = require('@chainless-js/crypto');
+const { InMemoryKeyStore } = require('@chainless-js/keystores');
+const { InMemorySigner } = require('@chainless-js/signers');
+const { baseDecode } = require('@chainless-js/utils');
+const { actionCreators, createTransaction, SCHEMA } = require('@chainless-js/transactions');
 const BN = require('bn.js');
 const { deserialize } = require('borsh');
 const localStorage = require('localstorage-memory');
@@ -11,7 +11,7 @@ const url = require('url');
 const { WalletConnection } = require('../lib/wallet_account');
 
 const { functionCall, transfer } = actionCreators;
-// If an access key has itself as receiverId and method permission add_request_and_confirm, then it is being used in a wallet with multisig contract: https://github.com/near/core-contracts/blob/671c05f09abecabe7a7e58efe942550a35fc3292/multisig/src/lib.rs#L149-L153
+// If an access key has itself as receiverId and method permission add_request_and_confirm, then it is being used in a wallet with multisig contract: https://github.com/wulianapp/core-contracts/blob/671c05f09abecabe7a7e58efe942550a35fc3292/multisig/src/lib.rs#L149-L153
 const MULTISIG_HAS_METHOD = 'add_request_and_confirm';
 
 let lastRedirectUrl;

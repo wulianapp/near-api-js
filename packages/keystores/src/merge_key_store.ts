@@ -1,4 +1,4 @@
-import { KeyPair } from '@near-js/crypto';
+import { KeyPair } from '@chainless-js/crypto';
 import { KeyStore } from './keystore';
 
 /**
@@ -7,7 +7,7 @@ import { KeyStore } from './keystore';
  * @example
  * ```js
  * const { homedir } = require('os');
- * import { connect, keyStores, utils } from 'near-api-js';
+ * import { connect, keyStores, utils } from 'chainless-api-ts';
  * 
  * const privateKey = '.......';
  * const keyPair = utils.KeyPair.fromString(privateKey);

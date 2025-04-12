@@ -1,24 +1,24 @@
 
 # IFrame RPC
 
-The `@near-js/iframe-rpc` package facilitates async RPC calls between cross-domain frames using the `postMessage` API. 
+The `@chainless-js/iframe-rpc` package facilitates async RPC calls between cross-domain frames using the `postMessage` API. 
   
 
 ## Installation and Usage
 
-Install [`@near-js/iframe-rpc`](https://www.npmjs.com/package/@near-js/iframe-rpc) package from the NPM registry. 
+Install [`@chainless-js/iframe-rpc`](https://www.npmjs.com/package/@chainless-js/iframe-rpc) package from the NPM registry. 
 
 ```bash
 # Using Yarn
-yarn add @near-js/iframe-rpc 
+yarn add @chainless-js/iframe-rpc 
 
 # Using NPM.
-npm install @near-js/iframe-rpc 
+npm install @chainless-js/iframe-rpc 
 ```
 
 In your app:
 ```ts
-import { IFrameRPC } from  "@near-js/iframe-rpc";
+import { IFrameRPC } from  "@chainless-js/iframe-rpc";
 const rpc = new IFrameRPC({...})
 await rpc.isReady
 // Call away!

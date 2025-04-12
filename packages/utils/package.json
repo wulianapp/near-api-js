@@ -1,6 +1,6 @@
 {
-  "name": "@near-js/utils",
-  "version": "0.2.2",
+  "name": "@chainless-js/utils",
+  "version": "0.2.5",
   "description": "Common methods and constants for the NEAR API JavaScript client",
   "main": "lib/index.js",
   "scripts": {
@@ -14,7 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@near-js/types": "workspace:*",
+    "@chainless-js/types": "workspace:*",
     "bs58": "4.0.0",
     "depd": "2.0.0",
     "mustache": "4.0.0"

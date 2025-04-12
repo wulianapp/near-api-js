@@ -1,6 +1,6 @@
 {
-  "name": "@near-js/keystores-node",
-  "version": "0.0.12",
+  "name": "@chainless-js/keystores-node",
+  "version": "0.0.15",
   "description": "KeyStore implementation for working with keys in the local filesystem",
   "main": "lib/index.js",
   "scripts": {
@@ -16,8 +16,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@near-js/crypto": "workspace:*",
-    "@near-js/keystores": "workspace:*"
+    "@chainless-js/crypto": "workspace:*",
+    "@chainless-js/keystores": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "18.11.18",

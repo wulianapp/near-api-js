@@ -1,6 +1,6 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@2.1.1/schema.json",
-  "changelog": ["@changesets/changelog-github", { "repo": "near/near-api-js" }],
+  "changelog": ["@changesets/changelog-github", { "repo": "near/chainless-api-ts" }],
   "commit": false,
   "fixed": [],
   "linked": [],

@@ -1,4 +1,4 @@
-const { KeyPairEd25519 } = require('@near-js/crypto');
+const { KeyPairEd25519 } = require('@chainless-js/crypto');
 const fs = require('fs').promises;
 const path = require('path');
 const rimraf  = require('util').promisify(require('rimraf'));

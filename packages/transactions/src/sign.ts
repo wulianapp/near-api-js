@@ -1,4 +1,4 @@
-import { Signer } from '@near-js/signers';
+import { Signer } from '@chainless-js/signers';
 import { sha256 } from '@noble/hashes/sha256';
 
 import { Action, SignedDelegate } from './actions';

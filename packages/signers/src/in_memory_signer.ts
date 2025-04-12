@@ -1,5 +1,5 @@
-import { KeyPair, PublicKey, Signature } from '@near-js/crypto';
-import { InMemoryKeyStore, KeyStore } from '@near-js/keystores';
+import { KeyPair, PublicKey, Signature } from '@chainless-js/crypto';
+import { InMemoryKeyStore, KeyStore } from '@chainless-js/keystores';
 import { sha256 } from '@noble/hashes/sha256';
 
 import { Signer } from './signer';

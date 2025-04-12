@@ -1,4 +1,4 @@
-import { CurrentEpochValidatorInfo, NextEpochValidatorInfo } from '@near-js/types';
+import { CurrentEpochValidatorInfo, NextEpochValidatorInfo } from '@chainless-js/types';
 import depd from 'depd';
 import { sortBigIntAsc } from './utils';
 
@@ -49,7 +49,7 @@ function findSeatPriceForProtocolBefore49(validators: (CurrentEpochValidatorInfo
     return left;
 }
 
-// nearcore reference: https://github.com/near/nearcore/blob/5a8ae263ec07930cd34d0dcf5bcee250c67c02aa/chain/epoch_manager/src/validator_selection.rs#L308;L315
+// nearcore reference: https://github.com/wulianapp/nearcore/blob/5a8ae263ec07930cd34d0dcf5bcee250c67c02aa/chain/epoch_manager/src/validator_selection.rs#L308;L315
 function findSeatPriceForProtocolAfter49(validators: (CurrentEpochValidatorInfo | NextEpochValidatorInfo)[], maxNumberOfSeats: number, minimumStakeRatio: number[]): bigint {
     if (minimumStakeRatio.length != 2) {
         throw Error('minimumStakeRatio should have 2 elements');

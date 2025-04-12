@@ -9,7 +9,7 @@ body:
         - Is this clearly a NEAR JavaScript API defect?
         - Do I have basic ideas about where it goes wrong? (For example, if there are stack traces, are they pointing to one file?)
 
-        **Please don't use issues for just questions**. For support please use our other channels - the [Discord server](https://near.chat) or [GitHub discussions](https://github.com/near/near-api-js/discussions).
+        **Please don't use issues for just questions**. For support please use our other channels - the [Discord server](https://near.chat) or [GitHub discussions](https://github.com/wulianapp/chainless-api-ts/discussions).
         
         The quickest way to verify whether it's a NEAR JavaScript API defect is through a **reproduction**, starting with a fresh project and making changes until the bug is reproduced.
 
@@ -18,7 +18,7 @@ body:
       label: Prerequisites
       description: Please check the following items before creating a issue, these are basic sanity checks to make sure that the problem isn't something too obvious.
       options:
-        - label: I'm using the latest version of `near-api-js`.
+        - label: I'm using the latest version of `chainless-api-ts`.
           required: true
         - label: I have tried to start with a fresh project and reproduce the defect with minimal code changes.
         - label: I have read the console error messages carefully (if applicable).

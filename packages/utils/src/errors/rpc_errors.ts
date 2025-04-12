@@ -1,4 +1,4 @@
-import { TypedError } from '@near-js/types';
+import { TypedError } from '@chainless-js/types';
 import Mustache from 'mustache';
 
 import { formatNearAmount } from '../format';

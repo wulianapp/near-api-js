@@ -1,12 +1,12 @@
 <!--
 Thank you for sending the PR! We appreciate you spending the time to work on these changes.
-You can learn more about contributing to NEAR JavaScript API here: https://github.com/near/near-api-js/blob/master/CONTRIBUTING.md
+You can learn more about contributing to NEAR JavaScript API here: https://github.com/wulianapp/chainless-api-ts/blob/master/CONTRIBUTING.md
 Happy contributing!
 -->
 
 ## Pre-flight checklist
 
-- [ ] I have read the [Contributing Guidelines on pull requests](https://github.com/near/near-api-js/blob/master/CONTRIBUTING.md).
+- [ ] I have read the [Contributing Guidelines on pull requests](https://github.com/wulianapp/chainless-api-ts/blob/master/CONTRIBUTING.md).
 - [ ] Commit messages follow the [conventional commits](https://www.conventionalcommits.org/) spec
 - [ ] **If this is a code change**: I have written unit tests.
 - [ ] **If this changes code in a published package**: I have run `pnpm changeset` to create a `changeset` JSON document appropriate for this change.

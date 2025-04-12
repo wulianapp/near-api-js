@@ -1,7 +1,7 @@
-import { KeyPair } from '@near-js/crypto';
-import { KeyStore } from '@near-js/keystores';
+import { KeyPair } from '@chainless-js/crypto';
+import { KeyStore } from '@chainless-js/keystores';
 
-const LOCAL_STORAGE_KEY_PREFIX = 'near-api-js:keystore:';
+const LOCAL_STORAGE_KEY_PREFIX = 'chainless-api-ts:keystore:';
 
 /**
  * This class is used to store keys in the browsers local storage.
@@ -9,7 +9,7 @@ const LOCAL_STORAGE_KEY_PREFIX = 'near-api-js:keystore:';
  * @see [https://docs.near.org/docs/develop/front-end/naj-quick-reference#key-store](https://docs.near.org/docs/develop/front-end/naj-quick-reference#key-store)
  * @example
  * ```js
- * import { connect, keyStores } from 'near-api-js';
+ * import { connect, keyStores } from 'chainless-api-ts';
  * 
  * const keyStore = new keyStores.BrowserLocalStorageKeyStore();
  * const config = { 
@@ -33,7 +33,7 @@ export class BrowserLocalStorageKeyStore extends KeyStore {
 
     /**
      * @param localStorage defaults to window.localStorage
-     * @param prefix defaults to `near-api-js:keystore:`
+     * @param prefix defaults to `chainless-api-ts:keystore:`
      */
     constructor(localStorage: any = window.localStorage, prefix = LOCAL_STORAGE_KEY_PREFIX) {
         super();
@@ -122,7 +122,7 @@ export class BrowserLocalStorageKeyStore extends KeyStore {
      * Helper function to retrieve a local storage key
      * @param networkId The targeted network. (ex. default, betanet, etc…)
      * @param accountId The NEAR account tied to the storage key that's sought
-     * @returns {string} An example might be: `near-api-js:keystore:near-friend:default`
+     * @returns {string} An example might be: `chainless-api-ts:keystore:near-friend:default`
      */
     private storageKeyForSecretKey(networkId: string, accountId: string): string {
         return `${this.prefix}${accountId}:${networkId}`;

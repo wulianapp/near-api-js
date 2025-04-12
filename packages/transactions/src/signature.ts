@@ -1,5 +1,5 @@
-import { KeyType } from '@near-js/crypto';
-import { Assignable } from '@near-js/types';
+import { KeyType } from '@chainless-js/crypto';
+import { Assignable } from '@chainless-js/types';
 
 export class Signature extends Assignable {
     keyType: KeyType;

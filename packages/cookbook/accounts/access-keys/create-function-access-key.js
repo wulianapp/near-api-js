@@ -1,4 +1,4 @@
-const { KeyPair, keyStores, connect } = require("near-api-js");
+const { KeyPair, keyStores, connect } = require("chainless-api-ts");
 const path = require("path");
 const homedir = require("os").homedir();
 
@@ -10,7 +10,7 @@ const keyStore = new keyStores.UnencryptedFileSystemKeyStore(credentialsPath);
 const config = {
   keyStore,
   networkId: "testnet",
-  nodeUrl: "https://rpc-testnet.chainless.top",
+  nodeUrl: "https://rpc-testnet.chainlessdw20.com",
 };
 
 addFunctionAccessKey(ACCOUNT_ID);

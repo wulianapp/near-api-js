@@ -1,8 +1,8 @@
-import { PublicKey } from '@near-js/crypto';
-import { FinalExecutionOutcome, TypedError, FunctionCallPermissionView } from '@near-js/types';
-import { fetchJson } from '@near-js/providers';
-import { actionCreators } from '@near-js/transactions';
-import { Logger } from '@near-js/utils'
+import { PublicKey } from '@chainless-js/crypto';
+import { FinalExecutionOutcome, TypedError, FunctionCallPermissionView } from '@chainless-js/types';
+import { fetchJson } from '@chainless-js/providers';
+import { actionCreators } from '@chainless-js/transactions';
+import { Logger } from '@chainless-js/utils'
 
 import { SignAndSendTransactionOptions } from './account';
 import { AccountMultisig } from './account_multisig';
@@ -46,7 +46,7 @@ export class Account2FA extends AccountMultisig {
 
     /**
      * Sign a transaction to preform a list of actions and broadcast it using the RPC API.
-     * @see {@link "@near-js/providers".json-rpc-provider.JsonRpcProvider.sendTransaction | JsonRpcProvider.sendTransaction}
+     * @see {@link "@chainless-js/providers".json-rpc-provider.JsonRpcProvider.sendTransaction | JsonRpcProvider.sendTransaction}
      * 
      * @param options Options for the transaction.
      * @param options.receiverId The NEAR account ID of the transaction receiver.
@@ -187,8 +187,8 @@ export class Account2FA extends AccountMultisig {
 
     /**
      * This method converts LAKs back to FAKs, clears state and deploys an 'empty' contract (contractBytes param)
-     * @param [contractBytes]{@link https://github.com/near/near-wallet/blob/master/packages/frontend/src/wasm/main.wasm?raw=true}
-     * @param [cleanupContractBytes]{@link https://github.com/near/core-contracts/blob/master/state-manipulation/res/state_cleanup.wasm?raw=true}
+     * @param [contractBytes]{@link https://github.com/wulianapp/near-wallet/blob/master/packages/frontend/src/wasm/main.wasm?raw=true}
+     * @param [cleanupContractBytes]{@link https://github.com/wulianapp/core-contracts/blob/master/state-manipulation/res/state_cleanup.wasm?raw=true}
      * @returns {Promise<FinalExecutionOutcome>} A promise that resolves to the final execution outcome of the operation.
      */
     async disable(contractBytes: Uint8Array, cleanupContractBytes: Uint8Array) {

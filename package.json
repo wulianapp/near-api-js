@@ -1,5 +1,5 @@
 {
-  "name": "@near-js/monorepo",
+  "name": "@chainless-js/monorepo",
   "private": true,
   "engines": {
     "node": ">=16.14.0",
@@ -34,7 +34,6 @@
     "typescript": "4.9.4"
   },
   "resolutions": {
-    "near-sandbox": "0.0.18",
-    "near-api-js": "4.0.0"
+    "near-sandbox": "0.0.18"
   }
 }

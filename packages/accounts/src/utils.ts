@@ -3,9 +3,9 @@ import {
     BlockReference,
     CodeResult,
     PositionalArgsError,
-} from '@near-js/types';
+} from '@chainless-js/types';
 import { Connection } from './connection';
-import { printTxOutcomeLogs } from '@near-js/utils';
+import { printTxOutcomeLogs } from '@chainless-js/utils';
 import { ViewFunctionCallOptions } from './interface';
 
 function parseJsonFromRawResponse(response: Uint8Array): any {

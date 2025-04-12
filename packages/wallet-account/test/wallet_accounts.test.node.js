@@ -1,12 +1,12 @@
-const { KeyPair, PublicKey } = require("@near-js/crypto");
-const { InMemoryKeyStore } = require("@near-js/keystores");
-const { InMemorySigner } = require("@near-js/signers");
-const { baseDecode } = require("@near-js/utils");
+const { KeyPair, PublicKey } = require("@chainless-js/crypto");
+const { InMemoryKeyStore } = require("@chainless-js/keystores");
+const { InMemorySigner } = require("@chainless-js/signers");
+const { baseDecode } = require("@chainless-js/utils");
 const {
     actionCreators,
     createTransaction,
     SCHEMA,
-} = require("@near-js/transactions");
+} = require("@chainless-js/transactions");
 const BN = require("bn.js");
 const { deserialize } = require("borsh");
 const localStorage = require("localstorage-memory");

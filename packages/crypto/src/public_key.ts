@@ -1,5 +1,5 @@
-import { Assignable } from '@near-js/types';
-import { baseEncode, baseDecode } from '@near-js/utils';
+import { Assignable } from '@chainless-js/types';
+import { baseEncode, baseDecode } from '@chainless-js/utils';
 import { ed25519 } from '@noble/curves/ed25519';
 
 import { KeySize, KeyType } from './constants';

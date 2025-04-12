@@ -8,7 +8,7 @@ node_modules
 
 dist/
 
-# near-api-js files & coverage
+# chainless-api-ts files & coverage
 neardev/
 coverage/
 .nyc_output

@@ -1,4 +1,4 @@
-const { KeyPair } = require('@near-js/crypto');
+const { KeyPair } = require('@chainless-js/crypto');
 
 const testUtils = require('./test-utils');
 

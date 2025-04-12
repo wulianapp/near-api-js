@@ -1,6 +1,6 @@
 {
-  "name": "@near-js/crypto",
-  "version": "1.2.4",
+  "name": "@chainless-js/crypto",
+  "version": "1.2.7",
   "description": "Abstractions around NEAR-compatible elliptical curves and cryptographic keys",
   "main": "lib/index.js",
   "scripts": {
@@ -16,8 +16,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@near-js/types": "workspace:*",
-    "@near-js/utils": "workspace:*",
+    "@chainless-js/types": "workspace:*",
+    "@chainless-js/utils": "workspace:*",
     "borsh": "1.0.0",
     "@noble/curves": "1.2.0",
     "randombytes": "2.1.0"

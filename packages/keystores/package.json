@@ -1,6 +1,6 @@
 {
-  "name": "@near-js/keystores",
-  "version": "0.0.12",
+  "name": "@chainless-js/keystores",
+  "version": "0.0.15",
   "description": "Key storage and management implementations",
   "main": "lib/index.js",
   "scripts": {
@@ -16,8 +16,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@near-js/crypto": "workspace:*",
-    "@near-js/types": "workspace:*"
+    "@chainless-js/crypto": "workspace:*",
+    "@chainless-js/types": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "18.11.18",

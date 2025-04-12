@@ -3,9 +3,9 @@
  * @description
  * This module contains the {@link FailoverRpcProvider} client class
  * which can be used to interact with multiple [NEAR RPC APIs](https://docs.near.org/api/rpc/introduction).
- * @see {@link "@near-js/types".provider | provider} for a list of request and response types
+ * @see {@link "@chainless-js/types".provider | provider} for a list of request and response types
  */
-import { Logger } from '@near-js/utils';
+import { Logger } from '@chainless-js/utils';
 import {
     AccessKeyWithPublicKey,
     BlockId,
@@ -27,14 +27,14 @@ import {
     QueryResponseKind,
     TypedError,
     RpcQueryRequest,
-} from '@near-js/types';
-import { SignedTransaction } from '@near-js/transactions';
+} from '@chainless-js/types';
+import { SignedTransaction } from '@chainless-js/transactions';
 import { Provider } from './provider';
-import { TxExecutionStatus } from '@near-js/types';
+import { TxExecutionStatus } from '@chainless-js/types';
 
 /**
  * Client class to interact with the [NEAR RPC API](https://docs.near.org/api/rpc/introduction).
- * @see [https://github.com/near/nearcore/tree/master/chain/jsonrpc](https://github.com/near/nearcore/tree/master/chain/jsonrpc)
+ * @see [https://github.com/wulianapp/nearcore/tree/master/chain/jsonrpc](https://github.com/wulianapp/nearcore/tree/master/chain/jsonrpc)
  */
 export class FailoverRpcProvider extends Provider {
     /** @hidden */
@@ -170,7 +170,7 @@ export class FailoverRpcProvider extends Provider {
     }
 
     /**
-     * Query the RPC by passing an {@link "@near-js/types".provider/request.RpcQueryRequest | RpcQueryRequest }
+     * Query the RPC by passing an {@link "@chainless-js/types".provider/request.RpcQueryRequest | RpcQueryRequest }
      * @see [https://docs.near.org/api/rpc/contracts](https://docs.near.org/api/rpc/contracts)
      *
      * @typeParam T the shape of the returned query response
@@ -264,7 +264,7 @@ export class FailoverRpcProvider extends Provider {
      * to still be able to validate from that hash. This will either return the last block of the
      * next epoch, or the last final known block.
      *
-     * @see [https://github.com/near/NEPs/blob/master/specs/ChainSpec/LightClient.md#light-client-block](https://github.com/near/NEPs/blob/master/specs/ChainSpec/LightClient.md#light-client-block)
+     * @see [https://github.com/wulianapp/NEPs/blob/master/specs/ChainSpec/LightClient.md#light-client-block](https://github.com/wulianapp/NEPs/blob/master/specs/ChainSpec/LightClient.md#light-client-block)
      */
     async nextLightClientBlock(
         request: NextLightClientBlockRequest

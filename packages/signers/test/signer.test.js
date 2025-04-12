@@ -1,4 +1,4 @@
-const { InMemoryKeyStore } = require('@near-js/keystores');
+const { InMemoryKeyStore } = require('@chainless-js/keystores');
 
 const { InMemorySigner } = require('../lib');
 

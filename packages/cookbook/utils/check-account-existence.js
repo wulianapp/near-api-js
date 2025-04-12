@@ -1,5 +1,5 @@
 // Demonstrates checking if an account exists
-const { providers } = require("near-api-js");
+const { providers } = require("chainless-api-ts");
 
 const provider = new providers.JsonRpcProvider(
     "https://archival-rpc-testnet.chainless.top"

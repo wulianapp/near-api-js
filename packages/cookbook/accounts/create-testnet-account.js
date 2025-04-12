@@ -3,7 +3,7 @@ const HELP = `Please run this script in the following format:
     node create-testnet-account.js CREATOR_ACCOUNT.testnet NEW_ACCOUNT.testnet AMOUNT
 `;
 
-const { connect, KeyPair, keyStores, utils } = require("near-api-js");
+const { connect, KeyPair, keyStores, utils } = require("chainless-api-ts");
 const path = require("path");
 const homedir = require("os").homedir();
 
@@ -14,7 +14,7 @@ const keyStore = new keyStores.UnencryptedFileSystemKeyStore(credentialsPath);
 const config = {
   keyStore,
   networkId: "testnet",
-  nodeUrl: "https://rpc-testnet.chainless.top",
+  nodeUrl: "https://rpc-testnet.chainlessdw20.com",
 };
 
 if (process.argv.length !== 5) {

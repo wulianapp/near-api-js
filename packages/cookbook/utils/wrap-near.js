@@ -4,7 +4,7 @@ const HELP = `To convert N $NEAR to wNEAR,  run this script in the following for
 
 `;
 
-const { connect, keyStores, transactions, utils } = require("near-api-js");
+const { connect, keyStores, transactions, utils } = require("chainless-api-ts");
 const path = require("path");
 const homedir = require("os").homedir();
 
@@ -17,7 +17,7 @@ const keyStore = new keyStores.UnencryptedFileSystemKeyStore(credentialsPath);
 const config = {
   keyStore,
   networkId: "testnet",
-  nodeUrl: "https://rpc-testnet.chainless.top",
+  nodeUrl: "https://rpc-testnet.chainlessdw20.com",
 };
 
 if (process.argv.length !== 4) {

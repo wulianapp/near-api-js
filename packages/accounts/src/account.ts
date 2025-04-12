@@ -1,5 +1,5 @@
-import { PublicKey } from "@near-js/crypto";
-import { exponentialBackoff } from "@near-js/providers";
+import { PublicKey } from "@chainless-js/crypto";
+import { exponentialBackoff } from "@chainless-js/providers";
 import {
     actionCreators,
     Action,
@@ -9,7 +9,7 @@ import {
     SignedDelegate,
     SignedTransaction,
     stringifyJsonOrBytes,
-} from "@near-js/transactions";
+} from "@chainless-js/transactions";
 import {
     PositionalArgsError,
     FinalExecutionOutcome,
@@ -24,7 +24,7 @@ import {
     AccessKeyInfoView,
     FunctionCallPermissionView,
     BlockReference,
-} from "@near-js/types";
+} from "@chainless-js/types";
 import {
     baseDecode,
     baseEncode,
@@ -32,7 +32,7 @@ import {
     parseResultError,
     DEFAULT_FUNCTION_CALL_GAS,
     printTxOutcomeLogsAndFailures,
-} from "@near-js/utils";
+} from "@chainless-js/utils";
 
 import { Connection } from "./connection";
 import { viewFunction, viewState } from "./utils";
@@ -122,7 +122,7 @@ interface SignedDelegateOptionsNonce {
 }
 
 /**
- * This class provides common account related RPC calls including signing transactions with a {@link "@near-js/crypto".key_pair.KeyPair | KeyPair}.
+ * This class provides common account related RPC calls including signing transactions with a {@link "@chainless-js/crypto".key_pair.KeyPair | KeyPair}.
  */
 export class Account implements IntoConnection {
     readonly connection: Connection;
@@ -153,7 +153,7 @@ export class Account implements IntoConnection {
      * Create a signed transaction which can be broadcast to the network
      * @param receiverId NEAR account receiving the transaction
      * @param actions list of actions to perform as part of the transaction
-     * @see {@link "@near-js/providers".json-rpc-provider.JsonRpcProvider.sendTransaction | JsonRpcProvider.sendTransaction}
+     * @see {@link "@chainless-js/providers".json-rpc-provider.JsonRpcProvider.sendTransaction | JsonRpcProvider.sendTransaction}
      */
     protected async signTransaction(
         receiverId: string,
@@ -187,7 +187,7 @@ export class Account implements IntoConnection {
 
     /**
      * Sign a transaction to perform a list of actions and broadcast it using the RPC API.
-     * @see {@link "@near-js/providers".json-rpc-provider.JsonRpcProvider | JsonRpcProvider }
+     * @see {@link "@chainless-js/providers".json-rpc-provider.JsonRpcProvider | JsonRpcProvider }
      *
      * @param options The options for signing and sending the transaction.
      * @param options.receiverId The NEAR account ID of the transaction receiver.
@@ -284,7 +284,7 @@ export class Account implements IntoConnection {
     accessKeyByPublicKeyCache: { [key: string]: AccessKeyView } = {};
 
     /**
-     * Finds the {@link AccessKeyView} associated with the accounts {@link PublicKey} stored in the {@link "@near-js/keystores".keystore.KeyStore | Keystore}.
+     * Finds the {@link AccessKeyView} associated with the accounts {@link PublicKey} stored in the {@link "@chainless-js/keystores".keystore.KeyStore | Keystore}.
      *
      * @todo Find matching access key based on transaction (i.e. receiverId and actions)
      *

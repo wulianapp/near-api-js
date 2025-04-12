@@ -1,4 +1,4 @@
-import { parseNearAmount } from '@near-js/utils';
+import { parseNearAmount } from '@chainless-js/utils';
 
 export const MULTISIG_STORAGE_KEY = '__multisigRequest';
 export const MULTISIG_ALLOWANCE = BigInt(parseNearAmount('1'));

@@ -1,4 +1,4 @@
-const { connect, keyStores, utils } = require("near-api-js");
+const { connect, keyStores, utils } = require("chainless-api-ts");
 const path = require("path");
 const homedir = require("os").homedir();
 

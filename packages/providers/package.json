@@ -1,6 +1,6 @@
 {
-  "name": "@near-js/providers",
-  "version": "0.2.2",
+  "name": "@chainless-js/providers",
+  "version": "0.2.5",
   "description": "Library of implementations for interfacing with the NEAR blockchain",
   "main": "lib/index.js",
   "scripts": {
@@ -16,9 +16,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@near-js/transactions": "workspace:*",
-    "@near-js/types": "workspace:*",
-    "@near-js/utils": "workspace:*",
+    "@chainless-js/transactions": "workspace:*",
+    "@chainless-js/types": "workspace:*",
+    "@chainless-js/utils": "workspace:*",
     "borsh": "1.0.0",
     "http-errors": "1.7.2"
   },
@@ -37,6 +37,6 @@
   ],
   "resolutions": {
     "near-sandbox": "0.0.18",
-    "near-api-js": "4.0.0"
+    "chainless-api-ts": "4.0.2"
   }
 }
